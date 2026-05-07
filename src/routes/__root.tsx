@@ -47,10 +47,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hikari Mori — フォトセラピー写真家・研究家" },
-      { name: "description", content: "写真を通して心の奥にある光を見つめ直す。フォトセラピー写真家・研究家 森ひかりの公式サイト。" },
-      { property: "og:title", content: "Hikari Mori — Photo Therapy Studio" },
-      { property: "og:description", content: "写真を通して心の奥にある光を見つめ直す。" },
+      { title: "AKAGI NENE | 朱樹音々 — 心象写真 Photographer & Researcher" },
+      { name: "description", content: "写真家・研究家 朱樹音々（Akagi Nene）公式サイト。写真を通して内面を可視化する表現「心象写真」を提唱。" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
