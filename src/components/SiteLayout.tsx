@@ -1,5 +1,5 @@
-import { Link, Outlet, useLocation } from "@tanstack/react-router";
-import { useState } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { useState, type ReactNode } from "react";
 
 const nav = [
   { to: "/", label: "Home", jp: "扉" },
@@ -9,7 +9,7 @@ const nav = [
   { to: "/contact", label: "Contact", jp: "お問い合わせ" },
 ] as const;
 
-export function SiteLayout() {
+export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -54,7 +54,7 @@ export function SiteLayout() {
       </header>
 
       <main className="flex-1 pt-20">
-        <Outlet />
+        {children}
       </main>
 
       <footer className="border-t border-border/60 mt-32">
