@@ -5,9 +5,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — お問い合わせ / AKAGI NENE" },
+      { title: "Contact — お問い合わせ / NENE AKAGI" },
       { name: "description", content: "展示・ワークショップ・講演・取材・共同研究のご依頼、企業研修プログラムのご相談はこちらから。" },
-      { property: "og:title", content: "Contact — AKAGI NENE" },
+      { property: "og:title", content: "Contact — NENE AKAGI" },
       { property: "og:description", content: "ご依頼・ご相談を承ります。" },
     ],
   }),

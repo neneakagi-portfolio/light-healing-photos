@@ -4,9 +4,9 @@ import { SiteLayout } from "@/components/SiteLayout";
 export const Route = createFileRoute("/biography")({
   head: () => ({
     meta: [
-      { title: "Biography — 朱樹音々 / AKAGI NENE" },
+      { title: "Biography — 朱樹音々 / NENE AKAGI" },
       { name: "description", content: "写真家・研究家 朱樹音々の経歴、展示歴、受賞歴、出版・寄稿情報。" },
-      { property: "og:title", content: "Biography — AKAGI NENE" },
+      { property: "og:title", content: "Biography — NENE AKAGI" },
       { property: "og:description", content: "心象写真を提唱する写真家・研究家の歩み。" },
     ],
   }),

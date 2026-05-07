@@ -5,9 +5,9 @@ import hero from "@/assets/nene-hero.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — 朱樹音々 / AKAGI NENE" },
+      { title: "About — 朱樹音々 / NENE AKAGI" },
       { name: "description", content: "写真家・研究家 朱樹音々のプロフィールと活動概要。心象写真を通して、自己理解と創造性を開く実践を行っています。" },
-      { property: "og:title", content: "About — AKAGI NENE" },
+      { property: "og:title", content: "About — NENE AKAGI" },
       { property: "og:description", content: "アートと心理の領域を横断する写真家のプロフィール。" },
     ],
   }),
@@ -21,7 +21,7 @@ function About() {
         <div className="md:col-span-7 order-2 md:order-1">
           <p className="font-sans text-[11px] text-ember">ABOUT</p>
           <h1 className="font-display text-5xl md:text-6xl mt-6 leading-[1.1]">
-            About <em className="italic">AKAGI NENE</em>
+            About <em className="italic">NENE AKAGI</em>
           </h1>
           <p className="font-jp text-[11px] tracking-[0.4em] text-muted-foreground mt-4">朱樹音々 ・ あかぎ ねね</p>
           <div className="hairline w-12 my-10" />

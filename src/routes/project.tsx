@@ -6,9 +6,9 @@ import p2 from "@/assets/nene-p2.jpg";
 export const Route = createFileRoute("/project")({
   head: () => ({
     meta: [
-      { title: "Project — 心象写真 / AKAGI NENE" },
+      { title: "Project — 心象写真 / NENE AKAGI" },
       { name: "description", content: "心象写真とは何か。朱樹音々が提唱する、写真を通して内面を可視化する表現手法と、その実践プログラム。" },
-      { property: "og:title", content: "Project — 心象写真 / AKAGI NENE" },
+      { property: "og:title", content: "Project — 心象写真 / NENE AKAGI" },
       { property: "og:description", content: "心の輪郭を、写真を通して描くプロジェクト。" },
       { property: "og:image", content: projectImg },
     ],

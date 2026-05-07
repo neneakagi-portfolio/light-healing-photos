@@ -10,9 +10,9 @@ import proj from "@/assets/nene-project.jpg";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — 作品 / AKAGI NENE" },
+      { title: "Portfolio — 作品 / NENE AKAGI" },
       { name: "description", content: "朱樹音々の代表作品集。心象写真シリーズ、肖像、風景、抽象。" },
-      { property: "og:title", content: "Portfolio — AKAGI NENE" },
+      { property: "og:title", content: "Portfolio — NENE AKAGI" },
       { property: "og:description", content: "心象写真の作品集。" },
       { property: "og:image", content: hero },
     ],
