@@ -1,13 +1,14 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
+import { T, LangToggle } from "@/components/LanguageProvider";
 
 const nav = [
-  { to: "/", label: "TOP" },
-  { to: "/about", label: "ABOUT" },
-  { to: "/biography", label: "BIOGRAPHY" },
-  { to: "/project", label: "PROJECT" },
-  { to: "/portfolio", label: "PORTFOLIO" },
-  { to: "/contact", label: "CONTACT" },
+  { to: "/", label: { ja: "TOP", en: "TOP" } },
+  { to: "/about", label: { ja: "ABOUT", en: "ABOUT" } },
+  { to: "/biography", label: { ja: "BIOGRAPHY", en: "BIOGRAPHY" } },
+  { to: "/project", label: { ja: "PROJECT", en: "PROJECT" } },
+  { to: "/portfolio", label: { ja: "PORTFOLIO", en: "PORTFOLIO" } },
+  { to: "/contact", label: { ja: "CONTACT", en: "CONTACT" } },
 ] as const;
 
 const PATREON_URL = "https://www.patreon.com/";
@@ -28,13 +29,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             {nav.map(n => {
               const active = pathname === n.to;
               return (
-                <Link
-                  key={n.to}
-                  to={n.to}
-                  className="font-sans text-[11px] relative py-1"
-                >
+                <Link key={n.to} to={n.to} className="font-sans text-[11px] relative py-1">
                   <span className={active ? "text-foreground" : "text-foreground/55 hover:text-foreground transition-colors duration-500"}>
-                    {n.label}
+                    <T ja={n.label.ja} en={n.label.en} />
                   </span>
                   {active && <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-foreground" />}
                 </Link>
@@ -48,14 +45,18 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             >
               PATREON
             </a>
+            <LangToggle className="ml-2" />
           </nav>
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden font-sans text-[11px] tracking-[0.3em]"
-            aria-label="menu"
-          >
-            {open ? "CLOSE" : "MENU"}
-          </button>
+          <div className="flex items-center gap-4 lg:hidden">
+            <LangToggle />
+            <button
+              onClick={() => setOpen(!open)}
+              className="font-sans text-[11px] tracking-[0.3em]"
+              aria-label="menu"
+            >
+              {open ? <T ja="閉じる" en="CLOSE" /> : <T ja="メニュー" en="MENU" />}
+            </button>
+          </div>
         </div>
         {open && (
           <div className="lg:hidden border-t border-border/60 bg-background">
@@ -67,7 +68,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   onClick={() => setOpen(false)}
                   className="font-sans text-sm tracking-[0.3em] text-foreground/80"
                 >
-                  {n.label}
+                  <T ja={n.label.ja} en={n.label.en} />
                 </Link>
               ))}
               <a
@@ -91,8 +92,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <div className="font-display text-2xl tracking-[0.15em]">NENE AKAGI</div>
             <p className="font-jp text-[11px] tracking-[0.4em] text-muted-foreground mt-2">朱樹音々 ・ PHOTOGRAPHER & RESEARCHER</p>
             <p className="font-jp text-sm text-muted-foreground mt-6 leading-loose max-w-md">
-              心象写真 ── 写真を通して、内面を可視化する。
-              アートと心理の境界で、まなざしの実践を続けています。
+              <T
+                ja={<>心象写真 ── 写真を通して、内面を可視化する。アートと心理の境界で、まなざしの実践を続けています。</>}
+                en={<>Shinshō Shashin — visualizing the inner landscape through photography. A quiet practice at the intersection of art and psychology.</>}
+              />
             </p>
           </div>
           <div className="md:col-span-3">

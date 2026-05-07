@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import { T } from "@/components/LanguageProvider";
 import p1 from "@/assets/nene-p1.jpg";
 import p2 from "@/assets/nene-p2.jpg";
 import p3 from "@/assets/nene-p3.jpg";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/portfolio")({
       { title: "Portfolio — 作品 / NENE AKAGI" },
       { name: "description", content: "朱樹音々の代表作品集。心象写真シリーズ、肖像、風景、抽象。" },
       { property: "og:title", content: "Portfolio — NENE AKAGI" },
-      { property: "og:description", content: "心象写真の作品集。" },
+      { property: "og:description", content: "Selected works from the Shinshō Shashin practice." },
       { property: "og:image", content: hero },
     ],
   }),
@@ -35,11 +36,16 @@ function Portfolio() {
       <section className="max-w-[1400px] mx-auto px-6 lg:px-12 pt-20 pb-16">
         <p className="font-sans text-[11px] text-ember">PORTFOLIO</p>
         <h1 className="font-display text-5xl md:text-6xl mt-6 leading-[1.1]">
-          Works<span className="font-jp text-2xl text-muted-foreground ml-6 align-middle">— 作品集</span>
+          <T
+            ja={<>Works<span className="font-jp text-2xl text-muted-foreground ml-6 align-middle">— 作品集</span></>}
+            en={<>Selected Works</>}
+          />
         </h1>
-        <p className="mt-8 max-w-xl font-jp text-[15px] leading-loose text-muted-foreground">
-          心象写真として撮影された、選ばれた作品たち。<br/>
-          それぞれが、誰かの内側にある景色の断片です。
+        <p className="mt-8 max-w-xl text-[15px] leading-loose text-muted-foreground">
+          <T
+            ja={<>心象写真として撮影された、選ばれた作品たち。<br/>それぞれが、誰かの内側にある景色の断片です。</>}
+            en={<>Selected works made as Shinshō Shashin.<br/>Each one is a fragment of a landscape from someone's interior.</>}
+          />
         </p>
       </section>
 

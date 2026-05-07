@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import { T, useLang } from "@/components/LanguageProvider";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — お問い合わせ / NENE AKAGI" },
       { name: "description", content: "展示・ワークショップ・講演・取材・共同研究のご依頼、企業研修プログラムのご相談はこちらから。" },
       { property: "og:title", content: "Contact — NENE AKAGI" },
-      { property: "og:description", content: "ご依頼・ご相談を承ります。" },
+      { property: "og:description", content: "For exhibitions, workshops, lectures and collaborative research." },
     ],
   }),
   component: () => <SiteLayout><Contact /></SiteLayout>,
@@ -16,6 +17,10 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const { lang } = useLang();
+  const subjects = lang === "ja"
+    ? ["個人セッションについて", "企業研修・人事プログラム", "展示・キュレーション", "講演・取材のご依頼", "共同研究のご相談", "その他"]
+    : ["Personal session", "Corporate / HR program", "Exhibition & curation", "Lecture / press inquiry", "Collaborative research", "Other"];
   return (
     <section className="max-w-[1300px] mx-auto px-6 lg:px-12 pt-20 pb-32 grid md:grid-cols-12 gap-12 lg:gap-20">
       <div className="md:col-span-5">
@@ -24,10 +29,11 @@ function Contact() {
           Get in<br/><em className="italic">touch.</em>
         </h1>
         <div className="hairline w-12 my-10" />
-        <p className="font-jp text-[15px] leading-loose text-foreground/85">
-          展示・ワークショップ・講演・取材・共同研究のご依頼、
-          企業研修プログラムのご相談を承ります。<br/>
-          通常3〜5営業日以内にご返信いたします。
+        <p className="text-[15px] leading-loose text-foreground/85">
+          <T
+            ja={<>展示・ワークショップ・講演・取材・共同研究のご依頼、企業研修プログラムのご相談を承ります。<br/>通常3〜5営業日以内にご返信いたします。</>}
+            en={<>For exhibitions, workshops, lectures, press, collaborative research and corporate programs.<br/>Replies typically within 3–5 business days.</>}
+          />
         </p>
 
         <div className="mt-14 space-y-7 text-sm">
@@ -55,7 +61,7 @@ function Contact() {
               rel="noreferrer noopener"
               className="mt-2 inline-flex items-center gap-2 hover:text-ember transition-colors"
             >
-              Patreon でサポートする →
+              <T ja="Patreon でサポートする →" en="Support on Patreon →" />
             </a>
           </div>
         </div>
@@ -68,32 +74,29 @@ function Contact() {
         {sent ? (
           <div className="border border-border bg-secondary/40 p-12 text-center">
             <p className="font-display italic text-3xl">Thank you.</p>
-            <p className="font-jp mt-4 text-sm text-muted-foreground">お便りを受け取りました。改めてご連絡いたします。</p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              <T ja="お便りを受け取りました。改めてご連絡いたします。" en="Your message has been received. I'll reply soon." />
+            </p>
           </div>
         ) : (
           <div className="space-y-8">
             <div className="grid sm:grid-cols-2 gap-8">
-              <Field label="お名前" jp="NAME">
+              <Field jaLabel="お名前" enLabel="Name" tag="NAME">
                 <input required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
-              <Field label="所属（任意）" jp="COMPANY">
+              <Field jaLabel="所属（任意）" enLabel="Company (optional)" tag="COMPANY">
                 <input className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
             </div>
-            <Field label="メールアドレス" jp="EMAIL">
+            <Field jaLabel="メールアドレス" enLabel="Email" tag="EMAIL">
               <input required type="email" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
             </Field>
-            <Field label="ご用件" jp="SUBJECT">
-              <select required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors font-jp">
-                <option>個人セッションについて</option>
-                <option>企業研修・人事プログラム</option>
-                <option>展示・キュレーション</option>
-                <option>講演・取材のご依頼</option>
-                <option>共同研究のご相談</option>
-                <option>その他</option>
+            <Field jaLabel="ご用件" enLabel="Subject" tag="SUBJECT">
+              <select required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors">
+                {subjects.map(s => <option key={s}>{s}</option>)}
               </select>
             </Field>
-            <Field label="メッセージ" jp="MESSAGE">
+            <Field jaLabel="メッセージ" enLabel="Message" tag="MESSAGE">
               <textarea required rows={6} className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors resize-none" />
             </Field>
             <button
@@ -110,12 +113,12 @@ function Contact() {
   );
 }
 
-function Field({ label, jp, children }: { label: string; jp: string; children: React.ReactNode }) {
+function Field({ jaLabel, enLabel, tag, children }: { jaLabel: string; enLabel: string; tag: string; children: React.ReactNode }) {
   return (
     <label className="block">
       <span className="flex items-baseline justify-between mb-2">
-        <span className="font-jp text-sm">{label}</span>
-        <span className="font-sans text-[10px] text-muted-foreground">{jp}</span>
+        <span className="text-sm"><T ja={jaLabel} en={enLabel} /></span>
+        <span className="font-sans text-[10px] text-muted-foreground">{tag}</span>
       </span>
       {children}
     </label>
