@@ -2,7 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+JP:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -29,47 +29,45 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-clay: var(--clay);
-  --color-sage: var(--sage);
-  --color-cream: var(--cream);
   --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-sumi: var(--sumi);
+  --color-ember: var(--ember);
   --font-display: var(--font-display);
   --font-jp: var(--font-jp);
   --font-sans: var(--font-sans);
 }
 
 :root {
-  --radius: 0.25rem;
-  --background: oklch(0.965 0.012 80);
-  --foreground: oklch(0.24 0.018 50);
-  --cream: oklch(0.965 0.012 80);
-  --ink: oklch(0.24 0.018 50);
-  --clay: oklch(0.58 0.09 45);
-  --sage: oklch(0.62 0.04 130);
-  --card: oklch(0.98 0.008 80);
-  --card-foreground: oklch(0.24 0.018 50);
-  --popover: oklch(0.98 0.008 80);
-  --popover-foreground: oklch(0.24 0.018 50);
-  --primary: oklch(0.42 0.06 40);
-  --primary-foreground: oklch(0.965 0.012 80);
-  --secondary: oklch(0.92 0.018 80);
-  --secondary-foreground: oklch(0.28 0.02 50);
-  --muted: oklch(0.92 0.014 80);
-  --muted-foreground: oklch(0.48 0.02 60);
-  --accent: oklch(0.58 0.09 45);
-  --accent-foreground: oklch(0.98 0.008 80);
+  --radius: 0;
+  /* Quiet, gallery-like palette: warm bone paper / deep sumi ink */
+  --background: oklch(0.955 0.006 80);
+  --foreground: oklch(0.18 0.008 60);
+  --paper: oklch(0.955 0.006 80);
+  --ink: oklch(0.18 0.008 60);
+  --sumi: oklch(0.22 0.006 60);
+  --ember: oklch(0.52 0.13 40);
+  --card: oklch(0.97 0.004 80);
+  --card-foreground: oklch(0.18 0.008 60);
+  --popover: oklch(0.97 0.004 80);
+  --popover-foreground: oklch(0.18 0.008 60);
+  --primary: oklch(0.18 0.008 60);
+  --primary-foreground: oklch(0.97 0.004 80);
+  --secondary: oklch(0.92 0.008 80);
+  --secondary-foreground: oklch(0.22 0.006 60);
+  --muted: oklch(0.92 0.006 80);
+  --muted-foreground: oklch(0.45 0.012 60);
+  --accent: oklch(0.52 0.13 40);
+  --accent-foreground: oklch(0.97 0.004 80);
   --destructive: oklch(0.55 0.18 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.86 0.018 70);
-  --input: oklch(0.86 0.018 70);
-  --ring: oklch(0.58 0.09 45);
+  --border: oklch(0.84 0.01 70);
+  --input: oklch(0.84 0.01 70);
+  --ring: oklch(0.52 0.13 40);
 
-  --font-display: 'Cormorant Garamond', 'Shippori Mincho', serif;
-  --font-jp: 'Shippori Mincho', serif;
+  --font-display: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  --font-jp: 'Noto Serif JP', serif;
   --font-sans: 'Inter', system-ui, sans-serif;
-
-  --grain: radial-gradient(circle at 30% 20%, oklch(0.92 0.04 70 / 0.3), transparent 60%),
-           radial-gradient(circle at 80% 70%, oklch(0.85 0.05 50 / 0.25), transparent 55%);
 }
 
 @layer base {
@@ -80,29 +78,25 @@
     color: var(--color-foreground);
     font-family: var(--font-jp);
     font-feature-settings: "palt";
-    letter-spacing: 0.02em;
-    line-height: 1.85;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    line-height: 1.95;
+    -webkit-font-smoothing: antialiased;
   }
-  h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: 0.01em; font-weight: 400; }
+  h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: 0.02em; font-weight: 300; }
   .font-jp { font-family: var(--font-jp); }
   .font-display { font-family: var(--font-display); }
-  .font-sans { font-family: var(--font-sans); }
+  .font-sans { font-family: var(--font-sans); letter-spacing: 0.18em; }
 
   .vrl { writing-mode: vertical-rl; }
+  .hairline { height: 1px; background: var(--color-border); }
 
-  .grain::before {
-    content: "";
-    position: absolute; inset: 0;
-    background: var(--grain);
-    pointer-events: none;
-    mix-blend-mode: multiply;
-    opacity: 0.6;
-  }
-
-  .reveal { opacity: 0; transform: translateY(24px); animation: reveal 1.2s cubic-bezier(.2,.7,.2,1) forwards; }
-  .reveal-2 { animation-delay: .25s; }
-  .reveal-3 { animation-delay: .5s; }
+  .reveal { opacity: 0; transform: translateY(16px); animation: reveal 1.6s cubic-bezier(.2,.7,.2,1) forwards; }
+  .reveal-2 { animation-delay: .35s; }
+  .reveal-3 { animation-delay: .7s; }
+  .reveal-4 { animation-delay: 1.05s; }
   @keyframes reveal { to { opacity: 1; transform: none; } }
 
-  .hairline { height: 1px; background: linear-gradient(to right, transparent, var(--color-border), transparent); }
+  .fade-in { opacity: 0; animation: fadein 2.4s ease forwards; }
+  @keyframes fadein { to { opacity: 1; } }
 }

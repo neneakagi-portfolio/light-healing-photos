@@ -2,12 +2,15 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 
 const nav = [
-  { to: "/", label: "Home", jp: "扉" },
-  { to: "/about", label: "About", jp: "私について" },
-  { to: "/works", label: "Works", jp: "作品" },
-  { to: "/research", label: "Research", jp: "研究" },
-  { to: "/contact", label: "Contact", jp: "お問い合わせ" },
+  { to: "/", label: "TOP" },
+  { to: "/about", label: "ABOUT" },
+  { to: "/biography", label: "BIOGRAPHY" },
+  { to: "/project", label: "PROJECT" },
+  { to: "/portfolio", label: "PORTFOLIO" },
+  { to: "/contact", label: "CONTACT" },
 ] as const;
+
+const PATREON_URL = "https://www.patreon.com/";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
@@ -15,73 +18,100 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/60">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-          <Link to="/" className="group">
-            <div className="font-display text-2xl tracking-wide leading-none">Hikari Mori</div>
-            <div className="font-jp text-[10px] tracking-[0.4em] text-muted-foreground mt-1">フォトセラピー</div>
+      <header className="fixed top-0 inset-x-0 z-40 bg-background/85 backdrop-blur-sm border-b border-border/60">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-16 md:h-20 flex items-center justify-between">
+          <Link to="/" className="group flex items-baseline gap-3">
+            <span className="font-display text-xl md:text-2xl tracking-[0.15em]">AKAGI NENE</span>
+            <span className="hidden sm:inline font-jp text-[10px] tracking-[0.4em] text-muted-foreground">朱樹音々</span>
           </Link>
-          <nav className="hidden md:flex items-center gap-10">
-            {nav.map(n => (
-              <Link
-                key={n.to}
-                to={n.to}
-                className="group relative text-sm tracking-widest uppercase font-sans"
-              >
-                <span className={pathname === n.to ? "text-clay" : "text-foreground/80 group-hover:text-clay transition-colors"}>
-                  {n.label}
-                </span>
-                <span className={`absolute -bottom-1 left-0 h-px bg-clay transition-all duration-500 ${pathname === n.to ? "w-full" : "w-0 group-hover:w-full"}`} />
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center gap-8">
+            {nav.map(n => {
+              const active = pathname === n.to;
+              return (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  className="font-sans text-[11px] relative py-1"
+                >
+                  <span className={active ? "text-foreground" : "text-foreground/55 hover:text-foreground transition-colors duration-500"}>
+                    {n.label}
+                  </span>
+                  {active && <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-foreground" />}
+                </Link>
+              );
+            })}
+            <a
+              href={PATREON_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="font-sans text-[11px] border border-foreground/70 px-4 py-2 hover:bg-foreground hover:text-background transition-colors duration-500"
+            >
+              PATREON
+            </a>
           </nav>
-          <button onClick={() => setOpen(!open)} className="md:hidden text-sm tracking-widest" aria-label="menu">
-            {open ? "閉" : "menu"}
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden font-sans text-[11px] tracking-[0.3em]"
+            aria-label="menu"
+          >
+            {open ? "CLOSE" : "MENU"}
           </button>
         </div>
         {open && (
-          <div className="md:hidden border-t border-border/60 bg-background">
-            <div className="px-6 py-6 flex flex-col gap-4">
+          <div className="lg:hidden border-t border-border/60 bg-background">
+            <div className="px-6 py-8 flex flex-col gap-5">
               {nav.map(n => (
-                <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="flex items-baseline justify-between">
-                  <span className="font-display text-xl">{n.label}</span>
-                  <span className="font-jp text-xs text-muted-foreground">{n.jp}</span>
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  onClick={() => setOpen(false)}
+                  className="font-sans text-sm tracking-[0.3em] text-foreground/80"
+                >
+                  {n.label}
                 </Link>
               ))}
+              <a
+                href={PATREON_URL}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="font-sans text-sm tracking-[0.3em] border border-foreground/70 px-4 py-3 inline-block w-fit mt-2"
+              >
+                PATREON →
+              </a>
             </div>
           </div>
         )}
       </header>
 
-      <main className="flex-1 pt-20">
-        {children}
-      </main>
+      <main className="flex-1 pt-16 md:pt-20">{children}</main>
 
       <footer className="border-t border-border/60 mt-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12">
-          <div>
-            <div className="font-display text-3xl">Hikari Mori</div>
-            <p className="font-jp text-xs tracking-[0.3em] text-muted-foreground mt-2">PHOTO THERAPY STUDIO</p>
-            <p className="text-sm text-muted-foreground mt-6 leading-relaxed">
-              写真を通して、心の奥にある光を見つめ直す。<br/>
-              一枚の記憶が、あなたを癒す旅のはじまり。
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-5">
+            <div className="font-display text-2xl tracking-[0.15em]">AKAGI NENE</div>
+            <p className="font-jp text-[11px] tracking-[0.4em] text-muted-foreground mt-2">朱樹音々 ・ PHOTOGRAPHER & RESEARCHER</p>
+            <p className="font-jp text-sm text-muted-foreground mt-6 leading-loose max-w-md">
+              心象写真 ── 写真を通して、内面を可視化する。
+              アートと心理の境界で、まなざしの実践を続けています。
             </p>
           </div>
-          <div>
-            <p className="font-jp text-xs tracking-[0.3em] text-muted-foreground mb-4">CONTACT</p>
-            <p className="text-sm">studio@hikari-mori.jp</p>
-            <p className="text-sm mt-1">京都市左京区 銀閣寺前 3-12</p>
+          <div className="md:col-span-3">
+            <p className="font-sans text-[10px] text-muted-foreground mb-4">CONTACT</p>
+            <p className="text-sm">studio@akaginene.com</p>
+            <p className="text-sm mt-2 text-muted-foreground">Tokyo / Kyoto, Japan</p>
           </div>
-          <div>
-            <p className="font-jp text-xs tracking-[0.3em] text-muted-foreground mb-4">FOLLOW</p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="hover:text-clay transition-colors">Instagram</a>
-              <a href="#" className="hover:text-clay transition-colors">Note</a>
+          <div className="md:col-span-4">
+            <p className="font-sans text-[10px] text-muted-foreground mb-4">FOLLOW & SUPPORT</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <a href="#" className="hover:text-ember transition-colors">Instagram</a>
+              <a href="#" className="hover:text-ember transition-colors">Note</a>
+              <a href="#" className="hover:text-ember transition-colors">X / Twitter</a>
+              <a href={PATREON_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Patreon</a>
             </div>
           </div>
         </div>
-        <div className="border-t border-border/60 py-6 text-center text-xs text-muted-foreground tracking-widest">
-          © 2026 Hikari Mori — All photographs are sacred memories.
+        <div className="border-t border-border/60 py-6 text-center text-[10px] font-sans text-muted-foreground">
+          © {new Date().getFullYear()} AKAGI NENE — ALL RIGHTS RESERVED
         </div>
       </footer>
     </div>
