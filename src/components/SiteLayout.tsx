@@ -21,7 +21,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="fixed top-0 inset-x-0 z-40 bg-background/85 backdrop-blur-sm border-b border-border/60">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-16 md:h-20 flex items-center justify-between">
           <Link to="/" className="group flex items-baseline gap-3">
-            <span className="font-display text-xl md:text-2xl tracking-[0.15em]">AKAGI NENE</span>
+            <span className="font-display text-xl md:text-2xl tracking-[0.15em]">NENE AKAGI</span>
             <span className="hidden sm:inline font-jp text-[10px] tracking-[0.4em] text-muted-foreground">朱樹音々</span>
           </Link>
           <nav className="hidden lg:flex items-center gap-8">
@@ -88,7 +88,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="border-t border-border/60 mt-32">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <div className="font-display text-2xl tracking-[0.15em]">AKAGI NENE</div>
+            <div className="font-display text-2xl tracking-[0.15em]">NENE AKAGI</div>
             <p className="font-jp text-[11px] tracking-[0.4em] text-muted-foreground mt-2">朱樹音々 ・ PHOTOGRAPHER & RESEARCHER</p>
             <p className="font-jp text-sm text-muted-foreground mt-6 leading-loose max-w-md">
               心象写真 ── 写真を通して、内面を可視化する。
@@ -111,7 +111,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="border-t border-border/60 py-6 text-center text-[10px] font-sans text-muted-foreground">
-          © {new Date().getFullYear()} AKAGI NENE — ALL RIGHTS RESERVED
+          © {new Date().getFullYear()} NENE AKAGI — ALL RIGHTS RESERVED
         </div>
       </footer>
     </div>

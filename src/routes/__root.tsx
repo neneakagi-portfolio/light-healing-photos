@@ -47,8 +47,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AKAGI NENE | 朱樹音々 — 心象写真 Photographer & Researcher" },
-      { name: "description", content: "写真家・研究家 朱樹音々（Akagi Nene）公式サイト。写真を通して内面を可視化する表現「心象写真」を提唱。" },
+      { title: "NENE AKAGI | 朱樹音々 — 心象写真 Photographer & Researcher" },
+      { name: "description", content: "写真家・研究家 朱樹音々（Nene Akagi）公式サイト。写真を通して内面を可視化する表現「心象写真」を提唱。" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
