@@ -29,10 +29,24 @@ function Home() {
               />
             </h1>
             <div className="hairline w-12 my-10 reveal reveal-3" />
-            <p className="font-jp text-[15px] leading-loose text-foreground/75 max-w-md reveal reveal-3">
+            <p className="font-jp text-[15px] leading-loose text-foreground/75 max-w-md reveal reveal-3 space-y-4">
               <T
-                ja={<>写真家・研究家　朱樹音々（Nene Akagi）。<br/>写真を通して内面を可視化する表現手法<span className="text-foreground"> 「心象写真」</span>を提唱しています。</>}
-                en={<>Nene Akagi — photographer and researcher.<br/>Founder of <span className="text-foreground">Shinshō Shashin</span>, a practice that makes the inner world visible through photography.</>}
+                ja={
+                  <>
+                    <span className="block">写真家・研究者　朱樹音々（Nene Akagi）</span>
+                    <span className="block mt-4">26年にわたり写真表現を続けながら、<span className="text-foreground">「心象写真（Inner Vision Photography）」</span>という独自のアプローチを提唱。</span>
+                    <span className="block mt-4">言葉になる前の感情、記憶、感覚。人の内側に存在する“まだ輪郭を持たない景色”を、写真という行為を通して可視化しています。</span>
+                    <span className="block mt-4">アート、心理、非言語コミュニケーションの交差点から、新しい自己理解のあり方を探求しています。</span>
+                  </>
+                }
+                en={
+                  <>
+                    <span className="block">Nene Akagi — photographer and researcher.</span>
+                    <span className="block mt-4">For 26 years she has continued her practice in photography, proposing her own approach: <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span>.</span>
+                    <span className="block mt-4">Emotions, memories and sensations that precede language — the "landscapes that do not yet have an outline" inside a person — are made visible through the act of photography.</span>
+                    <span className="block mt-4">From the intersection of art, psychology and non-verbal communication, she explores new ways of self-understanding.</span>
+                  </>
+                }
               />
             </p>
             <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4 reveal reveal-4">
