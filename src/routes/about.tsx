@@ -30,16 +30,18 @@ function About() {
             <T
               ja={
                 <>
-                  <p className="font-jp">写真家・研究家。<br/>写真を通して内面を可視化する表現手法<span className="text-foreground">「心象写真」</span>を提唱し、アートと心理の領域を横断しながら、自己理解や創造性向上につながる体験を提供しています。</p>
-                  <p className="font-jp">個人セッション、企業研修、ワークショップ、講演、大学・研究機関との共同研究など、写真を媒介に「人と内面が出会う場」をつくる活動を国内外で続けています。</p>
-                  <p className="font-jp">静かな対話と、被写体への深いまなざし。一枚の写真が、見る人の中に残る景色になることを願って。</p>
+                  <p className="font-jp">写真家・研究者　朱樹音々（Nene Akagi）</p>
+                  <p className="font-jp">26年にわたり写真表現を続けながら、<br/><span className="text-foreground">「心象写真（Inner Vision Photography）」</span>という独自のアプローチを提唱。</p>
+                  <p className="font-jp">言葉になる前の感情、記憶、感覚。<br/>人の内側に存在する“まだ輪郭を持たない景色”を、写真という行為を通して可視化しています。</p>
+                  <p className="font-jp">アート、心理、非言語コミュニケーションの交差点から、新しい自己理解のあり方を探求しています。</p>
                 </>
               }
               en={
                 <>
-                  <p>Photographer and researcher.<br/>Founder of <span className="text-foreground">Shinshō Shashin</span> ("inner-image photography") — a practice that makes the inner world visible through the camera, working between art and psychology to support self-understanding and creative growth.</p>
-                  <p>Through personal sessions, corporate programs, workshops, lectures, and collaborative research with universities and institutions, she creates spaces where people meet their own interior — in Japan and abroad.</p>
-                  <p>Quiet dialogue, and a deep gaze toward the subject. A single image, hoping to remain as a landscape inside the viewer.</p>
+                  <p>Photographer and researcher — Nene Akagi.</p>
+                  <p>For 26 years she has continued her practice in photography, proposing her own approach: <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span>.</p>
+                  <p>Emotions, memories, and sensations that precede language — the "landscapes that do not yet have an outline" existing inside a person — are made visible through the act of photography.</p>
+                  <p>From the intersection of art, psychology, and non-verbal communication, she explores new ways of self-understanding.</p>
                 </>
               }
             />
