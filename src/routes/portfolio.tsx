@@ -111,31 +111,6 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-32">
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-10">
-          {works.map(w => (
-            <figure key={w.t} className={`group ${w.span}`}>
-              <div className={`relative ${w.ratio} bg-sumi overflow-hidden`}>
-                <img
-                  src={w.img}
-                  alt={w.t}
-                  loading="lazy"
-                  width={w.w}
-                  height={w.h}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-[1.03]"
-                />
-              </div>
-              <figcaption className="mt-4 flex items-baseline justify-between">
-                <div>
-                  <p className="font-display text-lg">{w.t}</p>
-                  <p className="font-jp text-[11px] tracking-[0.3em] text-muted-foreground mt-0.5">{w.jp}</p>
-                </div>
-                <p className="font-sans text-[10px] text-ember">{w.y}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
 
       {lightbox && (
         <div
