@@ -44,14 +44,6 @@ const featured = [
   },
 ];
 
-const works = [
-  { img: hero, t: "Quiet Witness", jp: "静かな目撃者", y: "2024", w: 1280, h: 1600, span: "lg:col-span-7 lg:row-span-2", ratio: "aspect-[4/5]" },
-  { img: p1,   t: "Veil",            jp: "帷",         y: "2023", w: 1280, h: 1600, span: "lg:col-span-5", ratio: "aspect-[4/5]" },
-  { img: p3,   t: "Ember",           jp: "残り火",     y: "2024", w: 1280, h: 1600, span: "lg:col-span-5", ratio: "aspect-[4/5]" },
-  { img: p4,   t: "Inner Landscape", jp: "内景",       y: "2022", w: 1600, h: 1280, span: "lg:col-span-7", ratio: "aspect-[5/4]" },
-  { img: p2,   t: "Held",            jp: "うつわ",     y: "2023", w: 1280, h: 1600, span: "lg:col-span-5", ratio: "aspect-[4/5]" },
-  { img: proj, t: "Threshold",       jp: "境界",       y: "2025", w: 1600, h: 1280, span: "lg:col-span-7", ratio: "aspect-[5/4]" },
-];
 
 function Portfolio() {
   const { lang } = useLang();
