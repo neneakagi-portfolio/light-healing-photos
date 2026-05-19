@@ -11,7 +11,11 @@ const nav = [
   { to: "/contact", label: { ja: "CONTACT", en: "CONTACT" } },
 ] as const;
 
-const PATREON_URL = "https://www.patreon.com/";
+const PATREON_URL = "https://www.patreon.com/c/NeneAkagi";
+const INSTAGRAM_URL = "https://www.instagram.com/neneakagi/";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61589334376047";
+const NOTE_URL = "https://note.com/neneakagi";
+const EMAIL_ADDR = "neneakagi@gmail.com";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
@@ -100,15 +104,15 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="md:col-span-3">
             <p className="font-sans text-[10px] text-muted-foreground mb-4">CONTACT</p>
-            <p className="text-sm">studio@akaginene.com</p>
-            <p className="text-sm mt-2 text-muted-foreground">Tokyo / Kyoto, Japan</p>
+            <a href={`mailto:${EMAIL_ADDR}`} className="text-sm hover:text-ember transition-colors">{EMAIL_ADDR}</a>
+            <p className="text-sm mt-2 text-muted-foreground">Japan</p>
           </div>
           <div className="md:col-span-4">
             <p className="font-sans text-[10px] text-muted-foreground mb-4">FOLLOW & SUPPORT</p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-              <a href="#" className="hover:text-ember transition-colors">Instagram</a>
-              <a href="#" className="hover:text-ember transition-colors">Note</a>
-              <a href="#" className="hover:text-ember transition-colors">X / Twitter</a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Instagram</a>
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Facebook</a>
+              <a href={NOTE_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Note</a>
               <a href={PATREON_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Patreon</a>
             </div>
           </div>
