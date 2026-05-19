@@ -29,34 +29,38 @@ function Contact() {
           Get in<br/><em className="italic">touch.</em>
         </h1>
         <div className="hairline w-12 my-10" />
-        <p className="text-[15px] leading-loose text-foreground/85">
+        <div className="text-[15px] leading-loose text-foreground/85 space-y-4">
           <T
-            ja={<>展示・ワークショップ・講演・取材・共同研究のご依頼、企業研修プログラムのご相談を承ります。<br/>通常3〜5営業日以内にご返信いたします。</>}
-            en={<>For exhibitions, workshops, lectures, press, collaborative research and corporate programs.<br/>Replies typically within 3–5 business days.</>}
+            ja={<>
+              <p>展示・ワークショップ・講演・共同研究・取材などのご相談を承っております。</p>
+              <p>Inner Vision Photography（心象写真）に関するご依頼やお問い合わせは、こちらからお気軽にご連絡ください。</p>
+              <p>内容を確認後、数日以内にご返信いたします。</p>
+            </>}
+            en={<>
+              <p>I welcome inquiries regarding exhibitions, workshops, lectures, collaborative research, and interviews.</p>
+              <p>Please feel free to contact me regarding Inner Vision Photography projects and collaborations.</p>
+              <p>I will respond within a few days after reviewing your message.</p>
+            </>}
           />
-        </p>
+        </div>
 
         <div className="mt-14 space-y-7 text-sm">
           <div>
             <p className="font-sans text-[10px] text-muted-foreground">EMAIL</p>
-            <p className="mt-2">studio@akaginene.com</p>
-          </div>
-          <div>
-            <p className="font-sans text-[10px] text-muted-foreground">FOR PRESS</p>
-            <p className="mt-2">press@akaginene.com</p>
+            <a href="mailto:neneakagi@gmail.com" className="mt-2 inline-block hover:text-ember transition-colors">neneakagi@gmail.com</a>
           </div>
           <div>
             <p className="font-sans text-[10px] text-muted-foreground">SNS</p>
             <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2">
-              <a href="#" className="hover:text-ember transition-colors">Instagram</a>
-              <a href="#" className="hover:text-ember transition-colors">Note</a>
-              <a href="#" className="hover:text-ember transition-colors">X / Twitter</a>
+              <a href="https://www.instagram.com/neneakagi/" target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Instagram</a>
+              <a href="https://www.facebook.com/profile.php?id=61589334376047" target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Facebook</a>
+              <a href="https://note.com/neneakagi" target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Note</a>
             </div>
           </div>
           <div>
             <p className="font-sans text-[10px] text-muted-foreground">SUPPORT</p>
             <a
-              href="https://www.patreon.com/"
+              href="https://www.patreon.com/c/NeneAkagi"
               target="_blank"
               rel="noreferrer noopener"
               className="mt-2 inline-flex items-center gap-2 hover:text-ember transition-colors"
