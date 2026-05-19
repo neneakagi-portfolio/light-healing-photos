@@ -11,7 +11,11 @@ const nav = [
   { to: "/contact", label: { ja: "CONTACT", en: "CONTACT" } },
 ] as const;
 
-const PATREON_URL = "https://www.patreon.com/";
+const PATREON_URL = "https://www.patreon.com/c/NeneAkagi";
+const INSTAGRAM_URL = "https://www.instagram.com/neneakagi/";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61589334376047";
+const NOTE_URL = "https://note.com/neneakagi";
+const EMAIL_ADDR = "neneakagi@gmail.com";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
