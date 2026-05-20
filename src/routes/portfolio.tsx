@@ -90,14 +90,15 @@ function Portfolio() {
               <figure key={w.t} className="group">
                 <button
                   type="button"
-                  onClick={() => setLightbox({ img: w.img, alt: w.t, cap })}
+                  onClick={() => setLightbox({ img: w.img, alt: w.alt, cap })}
                   className="block w-full aspect-square overflow-hidden bg-sumi shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
                   aria-label={`${w.t} を拡大表示`}
                 >
                   <img
                     src={w.img}
-                    alt={w.t}
+                    alt={w.alt}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   />
                 </button>
