@@ -50,7 +50,7 @@ const featured = [
 
 function Portfolio() {
   const { lang } = useLang();
-  const [lightbox, setLightbox] = useState<null | { img: string; alt: string; cap: string }>(null);
+  const [lightbox, setLightbox] = useState<null | { img: string; alt: string; cap: string; title: string }>(null);
 
   useEffect(() => {
     if (!lightbox) return;
