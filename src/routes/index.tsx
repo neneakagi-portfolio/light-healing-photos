@@ -69,9 +69,12 @@ function Home() {
         <div className="md:col-span-5 relative order-1 md:order-2 min-h-[55vh] md:min-h-full bg-sumi">
           <img
             src={hero}
-            alt="Nene Akagi portrait"
+            alt="写真家・研究者 朱樹音々（Nene Akagi）のポートレート / Portrait of photographer and researcher Nene Akagi"
             width={1280}
             height={1600}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="absolute inset-0 w-full h-full object-cover fade-in"
           />
         </div>
