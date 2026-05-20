@@ -6,10 +6,13 @@ import hero from "@/assets/nene-hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NENE AKAGI | 朱樹音々 — 心象写真 / Photographer & Researcher" },
-      { name: "description", content: "写真家・研究家 朱樹音々 (Nene Akagi) 公式サイト。写真を通して内面を可視化する表現「心象写真」を提唱。" },
-      { property: "og:title", content: "NENE AKAGI — Shinshō Shashin Photographer" },
-      { property: "og:description", content: "Bringing the inner landscape into a single frame of light." },
+      { title: "Nene Akagi | Inner Vision Photography" },
+      { name: "description", content: "朱樹音々（Nene Akagi）の公式サイト。写真を通して内面の感情や記憶を可視化する「Inner Vision Photography（心象写真）」の作品・研究・展示・活動を掲載しています。" },
+      { property: "og:title", content: "Nene Akagi | Inner Vision Photography" },
+      { property: "og:description", content: "言葉になる前の感情を、写真として可視化する。" },
+      { property: "og:image", content: hero },
+      { property: "og:image:alt", content: "Nene Akagi — Inner Vision Photography portrait" },
+      { name: "twitter:image", content: hero },
     ],
   }),
   component: () => <SiteLayout><Home /></SiteLayout>,
@@ -66,9 +69,12 @@ function Home() {
         <div className="md:col-span-5 relative order-1 md:order-2 min-h-[55vh] md:min-h-full bg-sumi">
           <img
             src={hero}
-            alt="Nene Akagi portrait"
+            alt="写真家・研究者 朱樹音々（Nene Akagi）のポートレート / Portrait of photographer and researcher Nene Akagi"
             width={1280}
             height={1600}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="absolute inset-0 w-full h-full object-cover fade-in"
           />
         </div>

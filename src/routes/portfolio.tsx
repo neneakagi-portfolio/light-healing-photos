@@ -27,6 +27,7 @@ const featured = [
     jp: "浄化",
     cap_ja: "心に触れた静かな雨が、光の粒となって感情を洗い流していく。",
     cap_en: "A quiet rain that touches the heart becomes grains of light, washing emotions away.",
+    alt: "青い光と水滴を用いた抽象的な心象写真作品「浄化」 / Inner Vision Photography work 'Purification' — abstract composition of blue light and water droplets by Nene Akagi",
   },
   {
     img: work2,
@@ -34,6 +35,7 @@ const featured = [
     jp: "共存",
     cap_ja: "異なる存在が交差するとき、世界は新しい調和を見つけていく。",
     cap_en: "When different beings intersect, the world finds a new harmony.",
+    alt: "花と電線が重なり合う幻想的な心象写真作品「共存」 / Inner Vision Photography work 'Coexistence' — surreal composition of flowers and power lines by Nene Akagi",
   },
   {
     img: work3,
@@ -41,13 +43,14 @@ const featured = [
     jp: "再生",
     cap_ja: "立ち止まった場所から、私はもう一度、新しい光へ向かって歩き出す。",
     cap_en: "From the place where I paused, I begin to walk once more, toward a new light.",
+    alt: "ミラーと青い植物を組み合わせた心象写真作品「再生」 / Inner Vision Photography work 'Rebirth' — mirror and blue plant composition by Nene Akagi",
   },
 ];
 
 
 function Portfolio() {
   const { lang } = useLang();
-  const [lightbox, setLightbox] = useState<null | { img: string; alt: string; cap: string }>(null);
+  const [lightbox, setLightbox] = useState<null | { img: string; alt: string; cap: string; title: string }>(null);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -87,14 +90,15 @@ function Portfolio() {
               <figure key={w.t} className="group">
                 <button
                   type="button"
-                  onClick={() => setLightbox({ img: w.img, alt: w.t, cap })}
+                  onClick={() => setLightbox({ img: w.img, alt: w.alt, cap, title: w.t })}
                   className="block w-full aspect-square overflow-hidden bg-sumi shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
                   aria-label={`${w.t} を拡大表示`}
                 >
                   <img
                     src={w.img}
-                    alt={w.t}
+                    alt={w.alt}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   />
                 </button>
@@ -137,7 +141,7 @@ function Portfolio() {
               className="max-w-full max-h-[75vh] object-contain"
             />
             <figcaption className="mt-4 text-center text-white/85 text-[13px] leading-loose max-w-[40ch]">
-              <span className="font-display text-base block mb-1">{lightbox.alt}</span>
+              <span className="font-display text-base block mb-1">{lightbox.title}</span>
               {lightbox.cap}
             </figcaption>
           </figure>
