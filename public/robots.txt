@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neneakagi.lovable.app/sitemap.xml
