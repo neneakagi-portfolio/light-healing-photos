@@ -95,33 +95,29 @@ function Project() {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 border-t border-border">
-        <div className="relative aspect-[4/3] md:aspect-auto bg-sumi">
-          <img src={p2} alt="Session" loading="lazy" width={1280} height={1600} className="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div className="bg-secondary/40 px-6 lg:px-16 py-20 flex items-center">
-          <div className="max-w-md">
-            <p className="font-sans text-[11px] text-ember">FOR ORGANIZATIONS</p>
-            <h2 className="font-display text-3xl md:text-4xl mt-4 leading-tight">
-              <T
-                ja={<>組織のための<br/>心象写真プログラム</>}
-                en={<>Shinshō Shashin<br/>for organizations</>}
-              />
-            </h2>
-            <p className="text-sm leading-loose text-foreground/85 mt-8">
-              <T
-                ja={<>管理職・人事・経営層を対象に、自己認知と創造性を引き出す研修を設計します。半日プログラムから複数日プログラム、海外拠点向けの英語実施まで対応可能です。</>}
-                en={<>Programs designed for executives, HR and leadership teams to deepen self-awareness and creativity. Half-day to multi-day formats, with English delivery available for international offices.</>}
-              />
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 mt-10 font-sans text-[11px] border-b border-foreground pb-1 group"
-            >
-              REQUEST A PROPOSAL
-              <span className="group-hover:translate-x-2 transition-transform duration-500">→</span>
-            </Link>
-          </div>
+      <section className="border-t border-border bg-secondary/30">
+        <div className="max-w-[820px] mx-auto px-6 lg:px-12 py-28 md:py-36 text-center">
+          <p className="font-sans text-[11px] text-ember tracking-[0.3em]">FOR ORGANIZATIONS</p>
+          <h2 className="font-display text-3xl md:text-4xl mt-6 leading-tight">
+            <T
+              ja={<>組織のための<br/>心象写真プログラム</>}
+              en={<>Shinshō Shashin<br/>for organizations</>}
+            />
+          </h2>
+          <div className="hairline w-12 my-10 mx-auto" />
+          <p className="text-[15px] leading-loose text-foreground/85">
+            <T
+              ja={<>写真と対話を通して、<br/>自己認知や感覚共有について<br/>探求する実践プログラムを構想しています。</>}
+              en={<>An evolving practice program exploring<br/>self-awareness and the sharing of sensation<br/>through photography and dialogue.</>}
+            />
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-3 mt-12 font-sans text-[11px] border-b border-foreground pb-1 group"
+          >
+            REQUEST A PROPOSAL
+            <span className="group-hover:translate-x-2 transition-transform duration-500">→</span>
+          </Link>
         </div>
       </section>
     </>
