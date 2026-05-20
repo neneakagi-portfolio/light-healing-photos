@@ -141,7 +141,7 @@ function Portfolio() {
               className="max-w-full max-h-[75vh] object-contain"
             />
             <figcaption className="mt-4 text-center text-white/85 text-[13px] leading-loose max-w-[40ch]">
-              <span className="font-display text-base block mb-1">{lightbox.alt}</span>
+              <span className="font-display text-base block mb-1">{lightbox.title}</span>
               {lightbox.cap}
             </figcaption>
           </figure>
