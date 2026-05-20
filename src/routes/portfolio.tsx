@@ -90,7 +90,7 @@ function Portfolio() {
               <figure key={w.t} className="group">
                 <button
                   type="button"
-                  onClick={() => setLightbox({ img: w.img, alt: w.alt, cap })}
+                  onClick={() => setLightbox({ img: w.img, alt: w.alt, cap, title: w.t })}
                   className="block w-full aspect-square overflow-hidden bg-sumi shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
                   aria-label={`${w.t} を拡大表示`}
                 >
