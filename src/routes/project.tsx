@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { T } from "@/components/LanguageProvider";
 import projectImg from "@/assets/nene-project.jpg";
-import p2 from "@/assets/nene-p2.jpg";
+
 
 export const Route = createFileRoute("/project")({
   head: () => ({
