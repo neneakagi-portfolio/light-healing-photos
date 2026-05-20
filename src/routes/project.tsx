@@ -58,14 +58,20 @@ function Project() {
             <div className="hairline w-12 my-10" />
             <p className="text-[16px] leading-loose text-foreground/85 max-w-3xl">
               <T
-                ja={<>「心象写真」とは、外界を記録するためではなく、撮る人と撮られる人の<span className="text-foreground">内面に潜む景色</span>を可視化するために行う写真の実践です。シャッターを切るその一瞬に、言葉にならない感情、忘れていた記憶、まだ名前のない願いが現れます。</>}
-                en={<>Shinshō Shashin is a photographic practice not for recording the outer world, but for making visible the <span className="text-foreground">inner landscape</span> of both the one photographing and the one photographed. In that single shutter, unspeakable emotions, forgotten memories and unnamed wishes appear.</>}
+                ja={<>「心象写真」とは、外界を記録するためではなく、<br/>撮る人と撮られる人の<span className="text-foreground">内面に潜む景色</span>を可視化するために行う写真の実践です。</>}
+                en={<>Shinshō Shashin is a photographic practice not for recording the outer world, but for making visible the <span className="text-foreground">inner landscape</span> of both the one photographing and the one photographed.</>}
               />
             </p>
             <p className="text-[16px] leading-loose text-foreground/85 max-w-3xl mt-6">
               <T
-                ja={<>朱樹音々は、心理学と写真表現を横断する研究と実践を重ねながら、この手法を個人セッション・企業研修・ワークショップ・大学講義などへと展開しています。</>}
-                en={<>Nene Akagi develops this practice across personal sessions, corporate programs, workshops and university lectures, weaving together research in psychology and photographic expression.</>}
+                ja={<>シャッターを切るその一瞬に、<br/>言葉にならない感情、忘れていた記憶、<br/>まだ名前のない感覚が現れます。</>}
+                en={<>In that single shutter, unspeakable emotions, forgotten memories, and sensations still without a name appear.</>}
+              />
+            </p>
+            <p className="text-[16px] leading-loose text-foreground/85 max-w-3xl mt-6">
+              <T
+                ja={<>心理と写真表現の関係性を探求しながら、<br/>個人セッション、ワークショップ、展示などを通して、<br/>心象写真の実践を続けています。</>}
+                en={<>Exploring the relationship between psychology and photographic expression, I continue the practice of Shinshō Shashin through personal sessions, workshops and exhibitions.</>}
               />
             </p>
           </div>
