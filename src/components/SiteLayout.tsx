@@ -140,7 +140,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="border-t border-border/60 py-6 text-center text-[10px] font-sans text-muted-foreground">
-          © {new Date().getFullYear()} NENE AKAGI — ALL RIGHTS RESERVED
+          Supported by AftNEO
         </div>
       </footer>
     </div>

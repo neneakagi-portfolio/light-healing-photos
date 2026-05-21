@@ -32,14 +32,12 @@ function Contact() {
         <div className="text-[15px] leading-loose text-foreground/85 space-y-4">
           <T
             ja={<>
-              <p>展示・ワークショップ・講演・共同研究・取材などのご相談を承っております。</p>
-              <p>Inner Vision Photography（心象写真）に関するご依頼やお問い合わせは、こちらからお気軽にご連絡ください。</p>
-              <p>内容を確認後、数日以内にご返信いたします。</p>
+              <p>展示・ワークショップ・講演などのご相談を承っております。</p>
+              <p>お気軽にご連絡ください。</p>
             </>}
             en={<>
-              <p>I welcome inquiries regarding exhibitions, workshops, lectures, collaborative research, and interviews.</p>
-              <p>Please feel free to contact me regarding Inner Vision Photography projects and collaborations.</p>
-              <p>I will respond within a few days after reviewing your message.</p>
+              <p>I welcome inquiries regarding exhibitions, workshops, and lectures.</p>
+              <p>Please feel free to contact me.</p>
             </>}
           />
         </div>
@@ -65,7 +63,7 @@ function Contact() {
               rel="noreferrer noopener"
               className="mt-2 inline-flex items-center gap-2 hover:text-ember transition-colors"
             >
-              <T ja="Patreon でサポートする →" en="Support on Patreon →" />
+              <T ja="Patreon でサポートする" en="Support on Patreon" />
             </a>
           </div>
         </div>
