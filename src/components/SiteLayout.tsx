@@ -123,11 +123,19 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="md:col-span-4">
             <p className="font-sans text-[10px] text-muted-foreground mb-4">FOLLOW & SUPPORT</p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Instagram</a>
-              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Facebook</a>
-              <a href={NOTE_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Note</a>
-              <a href={PATREON_URL} target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Patreon</a>
+            <div className="flex flex-wrap gap-5 items-center">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="text-foreground/80 hover:text-ember transition-colors">
+                <Instagram className="w-5 h-5" strokeWidth={1.2} />
+              </a>
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer noopener" aria-label="Facebook" className="text-foreground/80 hover:text-ember transition-colors">
+                <Facebook className="w-5 h-5" strokeWidth={1.2} />
+              </a>
+              <a href={NOTE_URL} target="_blank" rel="noreferrer noopener" aria-label="note" className="text-foreground/80 hover:text-ember transition-colors">
+                <NoteIcon className="w-5 h-5" />
+              </a>
+              <a href={PATREON_URL} target="_blank" rel="noreferrer noopener" aria-label="Patreon" className="text-foreground/80 hover:text-ember transition-colors">
+                <PatreonIcon className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
