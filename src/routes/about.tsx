@@ -40,7 +40,7 @@ function About() {
               en={
                 <>
                   <p>From Ōita, Japan.</p>
-                  <p>Began photographing at nineteen. Exhibited internationally in Monaco, France and Spain. In 2016, received the Art Creation Award at the Monaco–Japan Art Festival; the work was permanently archived by the UNESCO-affiliated International Association of Art, Monaco Committee.</p>
+                  <p>Began photographing at nineteen. Exhibited internationally in Monaco and France. In 2016, received the Art Creation Award at the Monaco–Japan Art Festival; the work was permanently archived by the UNESCO-affiliated International Association of Art, Monaco Committee.</p>
                   <p>Approaches photography not as record, but as <span className="text-foreground">a medium for dialogue with the inner self</span>, exploring <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span> — a practice of rendering emotion, memory and the unspoken visible.</p>
                   <p>Through personal sessions, exhibitions, workshops, corporate programs, lectures and collaborative research, opens quiet spaces where looking at a photograph becomes a way of understanding oneself.</p>
                   <p>A quiet dialogue, and a steady gaze toward the subject. In the hope that a single photograph might leave a small light in someone's life.</p>
