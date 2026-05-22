@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { T, useLang } from "@/components/LanguageProvider";
 import { useState } from "react";
+import { Instagram, Facebook } from "lucide-react";
+
+const NoteIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 1 24 22" className={className} fill="currentColor" aria-hidden="true">
+    <text x="50%" y="55%" dominantBaseline="central" textAnchor="middle" fontFamily="sans-serif" fontWeight="700" fontSize="20">n</text>
+  </svg>
+);
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
