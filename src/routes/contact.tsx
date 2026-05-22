@@ -56,10 +56,16 @@ function Contact() {
           </div>
           <div>
             <p className="font-sans text-[10px] text-muted-foreground">SNS</p>
-            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2">
-              <a href="https://www.instagram.com/neneakagi/" target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Instagram</a>
-              <a href="https://www.facebook.com/profile.php?id=61589334376047" target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Facebook</a>
-              <a href="https://note.com/neneakagi" target="_blank" rel="noreferrer noopener" className="hover:text-ember transition-colors">Note</a>
+            <div className="mt-3 flex items-center gap-5">
+              <a href="https://www.instagram.com/neneakagi/" target="_blank" rel="noreferrer noopener" aria-label="Instagram" className="text-foreground/70 hover:text-ember transition-all duration-300 hover:-translate-y-0.5">
+                <Instagram className="w-[18px] h-[18px]" strokeWidth={1.2} />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61589334376047" target="_blank" rel="noreferrer noopener" aria-label="Facebook" className="text-foreground/70 hover:text-ember transition-all duration-300 hover:-translate-y-0.5">
+                <Facebook className="w-[18px] h-[18px]" strokeWidth={1.2} />
+              </a>
+              <a href="https://note.com/neneakagi" target="_blank" rel="noreferrer noopener" aria-label="Note" className="text-foreground/70 hover:text-ember transition-all duration-300 hover:-translate-y-0.5">
+                <NoteIcon className="w-[18px] h-[18px]" />
+              </a>
             </div>
           </div>
           <div>
