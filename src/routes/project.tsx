@@ -58,8 +58,8 @@ function Project() {
             <div className="hairline w-12 my-10" />
             <p className="text-[16px] leading-loose text-foreground/85 max-w-3xl">
               <T
-                ja={<>「心象写真」とは、外界を記録するためではなく、<br/>撮る人と撮られる人の<span className="text-foreground">内面に潜む景色</span>を可視化するために行う写真の実践です。</>}
-                en={<>Shinshō Shashin is a photographic practice not for recording the outer world, but for making visible the <span className="text-foreground">inner landscape</span> of both the one photographing and the one photographed.</>}
+                ja={<>「心象写真」とは、外界を記録するためではなく、<br/>撮る人の<span className="text-foreground">内面に潜む景色</span>を可視化するための、写真の実践。</>}
+                en={<>Shinshō Shashin — a photographic practice not for recording the outer world, but for making visible the <span className="text-foreground">inner landscape</span> of the one who photographs.</>}
               />
             </p>
             <p className="text-[16px] leading-loose text-foreground/85 max-w-3xl mt-6">
