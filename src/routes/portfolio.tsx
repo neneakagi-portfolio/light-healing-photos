@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { SiteLayout } from "@/components/SiteLayout";
 import { T, useLang } from "@/components/LanguageProvider";
 import hero from "@/assets/nene-hero.jpg";
@@ -50,16 +51,19 @@ const featured = [
 
 function Portfolio() {
   const { lang } = useLang();
-  const [lightbox, setLightbox] = useState<null | { img: string; alt: string; cap: string; title: string }>(null);
+  const [lightbox, setLightbox] = useState<null | { img: string; alt: string }>(null);
 
   useEffect(() => {
     if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
-    window.addEventListener("keydown", onKey);
+    const previousOverflow = document.body.style.overflow;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
     document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
     return () => {
       window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [lightbox]);
 
@@ -90,8 +94,8 @@ function Portfolio() {
               <figure key={w.t} className="group">
                 <button
                   type="button"
-                  onClick={() => setLightbox({ img: w.img, alt: w.alt, cap, title: w.t })}
-                  className="block w-full aspect-square overflow-hidden bg-sumi shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
+                  onClick={() => setLightbox({ img: w.img, alt: w.alt })}
+                  className="block w-full aspect-square cursor-zoom-in overflow-hidden bg-sumi shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
                   aria-label={`${w.t} を拡大表示`}
                 >
                   <img
@@ -116,36 +120,30 @@ function Portfolio() {
       </section>
 
 
-      {lightbox && (
+      {lightbox && typeof document !== "undefined" && createPortal(
         <div
-          className="fixed inset-0 z-[100] bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 animate-in fade-in duration-200"
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-[var(--lightbox-overlay)] p-4 md:p-8"
           onClick={() => setLightbox(null)}
           role="dialog"
           aria-modal="true"
+          aria-label="作品画像の拡大表示"
         >
           <button
             type="button"
             onClick={() => setLightbox(null)}
-            className="absolute top-5 right-5 text-white/80 hover:text-white text-sm tracking-[0.3em] font-sans"
+            className="absolute right-4 top-4 md:right-7 md:top-6 z-10 flex h-10 w-10 items-center justify-center font-sans text-2xl leading-none text-[var(--lightbox-foreground)]/80 transition-opacity duration-300 hover:opacity-100 opacity-70 focus:outline-none focus-visible:ring-1 focus-visible:ring-[var(--lightbox-foreground)]"
             aria-label="閉じる"
           >
-            CLOSE ×
+            ×
           </button>
-          <figure
-            className="max-w-[90vw] max-h-[85vh] flex flex-col items-center"
+          <img
+            src={lightbox.img}
+            alt={lightbox.alt}
+            className="h-[88dvh] w-[92vw] cursor-zoom-out object-contain"
             onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={lightbox.img}
-              alt={lightbox.alt}
-              className="max-w-full max-h-[75vh] object-contain"
-            />
-            <figcaption className="mt-4 text-center text-white/85 text-[13px] leading-loose max-w-[40ch]">
-              <span className="font-display text-base block mb-1">{lightbox.title}</span>
-              {lightbox.cap}
-            </figcaption>
-          </figure>
-        </div>
+          />
+        </div>,
+        document.body,
       )}
     </>
   );
