@@ -64,6 +64,8 @@
   --border: oklch(0.84 0.01 70);
   --input: oklch(0.84 0.01 70);
   --ring: oklch(0.52 0.13 40);
+  --lightbox-overlay: color-mix(in oklab, oklch(0 0 0) 88%, transparent);
+  --lightbox-foreground: oklch(0.97 0.004 80);
 
   --font-display: 'Cormorant Garamond', 'Noto Serif JP', serif;
   --font-jp: 'Noto Serif JP', serif;
