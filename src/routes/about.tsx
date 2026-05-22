@@ -30,20 +30,20 @@ function About() {
             <T
               ja={
                 <>
-                  <p className="font-jp">大分県出身。写真家・研究者です。</p>
-                  <p className="font-jp">19歳から写真活動を開始し、モナコ・フランス・スペインなど国内外で作品を発表。<br/>2016年には「モナコ・日本芸術祭」にて芸術創造賞を受賞し、作品はユネスコ公認国際美術連盟モナコ公国委員会に永久収蔵されました。</p>
-                  <p className="font-jp">近年は、写真を“記録”ではなく「内面と対話するためのメディア」として再定義し、感情・記憶・無意識のイメージを可視化する表現手法<span className="text-foreground">「心象写真（Inner Vision Photography）」</span>の研究と実践を行っています。</p>
-                  <p className="font-jp">個人セッション、展示、ワークショップ、企業研修、講演、共同研究などを通して、「写真を見ることそのものが、自分を理解する体験になる」場づくりを国内外で展開。</p>
-                  <p className="font-jp">静かな対話と、被写体への深いまなざし。<br/>一枚の写真が、誰かの人生に小さな光を残すことを願いながら活動を続けています。</p>
+                  <p className="font-jp">大分県出身。</p>
+                  <p className="font-jp">19歳より写真をはじめ、モナコ、フランス、スペインなど、国内外で作品を発表。<br/>2016年、モナコ・日本芸術祭にて芸術創造賞を受賞。作品はユネスコ公認 国際美術連盟モナコ公国委員会に永久収蔵。</p>
+                  <p className="font-jp">写真を“記録”ではなく、<span className="text-foreground">内面と対話するためのメディア</span>として捉え直し、感情・記憶・無意識のイメージを可視化する手法<span className="text-foreground">「心象写真（Inner Vision Photography）」</span>を探求している。</p>
+                  <p className="font-jp">個人セッション、展示、ワークショップ、企業研修、講演、共同研究などを通して、写真を見ることそのものが、自分を理解する体験となる場を、国内外でひらいている。</p>
+                  <p className="font-jp">静かな対話と、被写体への深いまなざし。<br/>一枚の写真が、誰かの人生に小さな光を残せたら——そう願いながら。</p>
                 </>
               }
               en={
                 <>
-                  <p>From Ōita Prefecture. A photographer and researcher based in Japan.</p>
-                  <p>She began her practice at the age of 19 and has exhibited internationally in Monaco, France, Spain and beyond. In 2016 she received the Art Creation Award at the Monaco–Japan Art Festival, and her work was permanently archived by the UNESCO-affiliated International Association of Art, Monaco Committee.</p>
-                  <p>In recent years she has redefined photography not as "record" but as "a medium for dialogue with the inner self," researching and practicing <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span> — a method that makes emotions, memories and unconscious imagery visible.</p>
-                  <p>Through individual sessions, exhibitions, workshops, corporate programs, lectures and collaborative research, she creates spaces — in Japan and abroad — where "the act of looking at a photograph itself becomes an experience of understanding oneself."</p>
-                  <p>Quiet dialogue, and a deep gaze toward the subject. She continues her practice with the hope that a single photograph might leave a small light in someone's life.</p>
+                  <p>From Ōita, Japan.</p>
+                  <p>Began photographing at nineteen. Exhibited internationally in Monaco, France and Spain. In 2016, received the Art Creation Award at the Monaco–Japan Art Festival; the work was permanently archived by the UNESCO-affiliated International Association of Art, Monaco Committee.</p>
+                  <p>Approaches photography not as record, but as <span className="text-foreground">a medium for dialogue with the inner self</span>, exploring <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span> — a practice of rendering emotion, memory and the unspoken visible.</p>
+                  <p>Through personal sessions, exhibitions, workshops, corporate programs, lectures and collaborative research, opens quiet spaces where looking at a photograph becomes a way of understanding oneself.</p>
+                  <p>A quiet dialogue, and a steady gaze toward the subject. In the hope that a single photograph might leave a small light in someone's life.</p>
                 </>
               }
             />
