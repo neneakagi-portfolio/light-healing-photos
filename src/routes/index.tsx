@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { T } from "@/components/LanguageProvider";
+import { news } from "@/data/news";
 import hero from "@/assets/nene-hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -79,6 +80,36 @@ function Home() {
           />
         </div>
       </section>
+
+      {news.length > 0 && (
+        <section className="max-w-3xl mx-auto px-6 lg:px-12 pt-28 md:pt-32">
+          <div className="flex items-baseline justify-between mb-12">
+            <div>
+              <p className="font-sans text-[11px] text-ember tracking-[0.3em]">NEWS</p>
+              <h2 className="font-display text-2xl md:text-3xl mt-3">
+                <T ja={<>お知らせ</>} en={<>News</>} />
+              </h2>
+            </div>
+            <Link to="/news" className="font-sans text-[11px] text-muted-foreground hover:text-ember transition-colors">
+              <T ja="すべて見る →" en="VIEW ALL →" />
+            </Link>
+          </div>
+          <ol className="divide-y divide-border/60 border-t border-border/60">
+            {news.slice(0, 3).map((n, i) => (
+              <li key={i} className="py-6 grid md:grid-cols-12 gap-3 md:gap-6">
+                <time className="md:col-span-3 font-sans text-[11px] tracking-[0.2em] text-muted-foreground">
+                  {n.date}
+                </time>
+                <div className="md:col-span-9">
+                  <Link to="/news" className="font-jp text-[14px] leading-relaxed text-foreground/85 hover:text-ember transition-colors">
+                    <T ja={n.title.ja} en={n.title.en} />
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       <section className="max-w-3xl mx-auto px-6 py-32 text-center">
         <div className="hairline w-16 mx-auto mb-12" />
