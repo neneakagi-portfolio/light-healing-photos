@@ -81,6 +81,17 @@ function Home() {
         </div>
       </section>
 
+      <section className="max-w-3xl mx-auto px-6 py-32 text-center">
+        <div className="hairline w-16 mx-auto mb-12" />
+        <blockquote className="font-display italic text-2xl md:text-3xl leading-relaxed text-foreground/85">
+          <T
+            ja={<>「写真は、外を写すと同時に<br className="hidden sm:inline"/>内側の沈黙を映し出す。」</>}
+            en={<>“A photograph captures the world,<br className="hidden sm:inline"/>and the silence within us.”</>}
+          />
+        </blockquote>
+        <p className="font-sans text-[10px] text-muted-foreground mt-10">— NENE AKAGI</p>
+      </section>
+
       {news.length > 0 && (
         <section className="max-w-3xl mx-auto px-6 lg:px-12 pt-28 md:pt-32">
           <div className="flex items-baseline justify-between mb-12">
@@ -110,17 +121,6 @@ function Home() {
           </ol>
         </section>
       )}
-
-      <section className="max-w-3xl mx-auto px-6 py-32 text-center">
-        <div className="hairline w-16 mx-auto mb-12" />
-        <blockquote className="font-display italic text-2xl md:text-3xl leading-relaxed text-foreground/85">
-          <T
-            ja={<>「写真は、外を写すと同時に<br className="hidden sm:inline"/>内側の沈黙を映し出す。」</>}
-            en={<>“A photograph captures the world,<br className="hidden sm:inline"/>and the silence within us.”</>}
-          />
-        </blockquote>
-        <p className="font-sans text-[10px] text-muted-foreground mt-10">— NENE AKAGI</p>
-      </section>
     </>
   );
 }
