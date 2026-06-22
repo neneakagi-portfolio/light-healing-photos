@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { T } from "@/components/LanguageProvider";
+import { news } from "@/data/news";
 import hero from "@/assets/nene-hero.jpg";
 
 export const Route = createFileRoute("/")({
