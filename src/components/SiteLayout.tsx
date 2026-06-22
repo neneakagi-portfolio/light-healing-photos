@@ -22,6 +22,7 @@ const nav = [
   { to: "/biography", label: { ja: "BIOGRAPHY", en: "BIOGRAPHY" } },
   { to: "/project", label: { ja: "PROJECT", en: "PROJECT" } },
   { to: "/portfolio", label: { ja: "PORTFOLIO", en: "PORTFOLIO" } },
+  { to: "/news", label: { ja: "NEWS", en: "NEWS" } },
   { to: "/contact", label: { ja: "CONTACT", en: "CONTACT" } },
 ] as const;
 
