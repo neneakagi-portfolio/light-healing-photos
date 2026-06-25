@@ -22,6 +22,17 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.06.25",
+    title: {
+      ja: "精神医学会にて学術発表・作品紹介",
+      en: "Academic Presentations and Recognition at Psychiatry Conferences",
+    },
+    body: {
+      ja: "このたび、2つの学術的活動をお知らせします。\n\n第122回日本精神神経学会学術総会にて、精神科医・三木一平先生の教育講演に心象写真の作品が紹介されました。\n\nまた、第3回日本外来精神医学会学術総会のポスター発表に参加し、心象写真を非言語的な自己理解・感情認知へのアプローチとして研究発表いたしました。\n\n芸術、写真、心理学、研究を結ぶ大切な一歩として、今後もこの実践を深めていきたいと考えています。",
+      en: "I am pleased to share two recent academic milestones.\n\nMy photographic works were introduced during an educational lecture by psychiatrist Dr. Kazuhei Miki at the 122nd Annual Meeting of the Japanese Society of Psychiatry and Neurology.\n\nIn addition, I participated in the poster session at the 3rd Annual Meeting of the Japanese Society of Outpatient Psychiatry, presenting my ongoing research on Inner Vision Photography—an original photographic approach that explores emotions and self-understanding through non-verbal visual expression.\n\nThese opportunities represent important steps in connecting art, photography, psychology, and research, and I look forward to continuing the development of this work.",
+    },
+  },
+  {
     date: "2026.06.22",
     title: {
       ja: "ウェブサイトを公開しました",
