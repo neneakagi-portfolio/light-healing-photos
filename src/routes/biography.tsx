@@ -5,11 +5,24 @@ import { T } from "@/components/LanguageProvider";
 export const Route = createFileRoute("/biography")({
   head: () => ({
     meta: [
-      { title: "Biography — 朱樹音々 / NENE AKAGI" },
-      { name: "description", content: "写真家・研究家 朱樹音々の経歴。" },
-      { property: "og:title", content: "Biography — NENE AKAGI" },
-      { property: "og:description", content: "Career of Nene Akagi." },
+      { title: "Biography | Nene Akagi | Photographer & Researcher" },
+      { name: "description", content: "写真家・研究者 朱樹音々（Nene Akagi）の経歴・受賞・展示・出版・学会発表など、Inner Vision Photographyに至るまでの歩み。" },
+      { property: "og:title", content: "Biography | Nene Akagi | Photographer & Researcher" },
+      { property: "og:description", content: "朱樹音々（Nene Akagi）の経歴・受賞・展示・学会発表。" },
+      { property: "og:url", content: "https://neneakagi.lovable.app/biography" },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/biography" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Biography", item: "https://neneakagi.lovable.app/biography" },
+        ],
+      }),
+    }],
   }),
   component: () => <SiteLayout><Biography /></SiteLayout>,
 });
