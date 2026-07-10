@@ -7,14 +7,16 @@ import hero from "@/assets/nene-hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nene Akagi | Inner Vision Photography" },
-      { name: "description", content: "朱樹音々（Nene Akagi）の公式サイト。写真を通して内面の感情や記憶を可視化する「Inner Vision Photography（心象写真）」の作品・研究・展示・活動を掲載しています。" },
-      { property: "og:title", content: "Nene Akagi | Inner Vision Photography" },
-      { property: "og:description", content: "言葉になる前の感情を、写真として可視化する。" },
-      { property: "og:image", content: hero },
+      { title: "朱樹音々 | Nene Akagi | Photographer・Researcher・Founder of Inner Vision Photography" },
+      { name: "description", content: "写真家・研究者 朱樹音々（Nene Akagi）公式サイト。Inner Vision Photography（心象写真）の研究・展示・講演・プロジェクト・学会発表・最新情報を掲載。" },
+      { property: "og:title", content: "朱樹音々 | Nene Akagi | Photographer・Researcher・Founder of Inner Vision Photography" },
+      { property: "og:description", content: "写真家・研究者 朱樹音々（Nene Akagi）公式サイト。Inner Vision Photography（心象写真）の研究・展示・講演・プロジェクト・学会発表・最新情報。" },
+      { property: "og:url", content: "https://neneakagi.lovable.app/" },
+      { property: "og:image", content: `https://neneakagi.lovable.app${hero}` },
       { property: "og:image:alt", content: "Nene Akagi — Inner Vision Photography portrait" },
-      { name: "twitter:image", content: hero },
+      { name: "twitter:image", content: `https://neneakagi.lovable.app${hero}` },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/" }],
   }),
   component: () => <SiteLayout><Home /></SiteLayout>,
 });

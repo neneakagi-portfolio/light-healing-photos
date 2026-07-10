@@ -5,11 +5,24 @@ import { T } from "@/components/LanguageProvider";
 export const Route = createFileRoute("/biography")({
   head: () => ({
     meta: [
-      { title: "Biography — 朱樹音々 / NENE AKAGI" },
-      { name: "description", content: "写真家・研究家 朱樹音々の経歴。" },
-      { property: "og:title", content: "Biography — NENE AKAGI" },
-      { property: "og:description", content: "Career of Nene Akagi." },
+      { title: "Biography | Nene Akagi | Photographer & Researcher" },
+      { name: "description", content: "写真家・研究者 朱樹音々（Nene Akagi）の経歴・受賞・展示・出版・学会発表など、Inner Vision Photographyに至るまでの歩み。" },
+      { property: "og:title", content: "Biography | Nene Akagi | Photographer & Researcher" },
+      { property: "og:description", content: "朱樹音々（Nene Akagi）の経歴・受賞・展示・学会発表。" },
+      { property: "og:url", content: "https://neneakagi.lovable.app/biography" },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/biography" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Biography", item: "https://neneakagi.lovable.app/biography" },
+        ],
+      }),
+    }],
   }),
   component: () => <SiteLayout><Biography /></SiteLayout>,
 });
@@ -34,7 +47,7 @@ const timeline = [
   { y: "2026.1–2",ja: "Fine Art Photography Exhibition Vol.9 横浜赤レンガ倉庫 出展（日本文藝主催）", en: "Fine Art Photography Exhibition Vol.9, Yokohama Red Brick Warehouse (organized by Nihon Bungei)" },
   { y: "2026.6", ja: "第122回日本精神神経学会学術総会にて、精神科医・三木和平先生の教育講演に心象写真の作品が紹介される", en: "The 122nd Annual Meeting of the Japanese Society of Psychiatry and Neurology — photographic works introduced during an educational lecture by psychiatrist Dr. Kazuhei Miki" },
   { y: "2026.6", ja: "第3回日本外来精神医学会学術総会 ポスター発表に参加。心象写真を非言語的な自己理解・感情認知へのアプローチとして研究発表", en: "The 3rd Annual Meeting of the Japanese Society of Outpatient Psychiatry — participated in the poster session presenting research on Inner Vision Photography as a non-verbal approach to self-understanding and emotional awareness" },
-  { y: "2026.6", ja: <>日本精神神経学会学術総会にて研究ポスター発表。<br/>発表ポスターは現在、三木メンタルクリニック院内に展示されています（院長のご厚意による）。</>, en: <>Presented a research poster at the Annual Meeting of the Japanese Society of Psychiatry and Neurology.<br/>The poster is currently displayed at Miki Mental Clinic with the kind permission of the clinic director.</> },
+  { y: "2026.6", ja: <>日本精神神経学会学術総会にて研究ポスター発表。<br/>発表ポスターは現在、三木メンタルクリニック院内に展示されています（院長のご厚意による）</>, en: <>Presented a research poster at the Annual Meeting of the Japanese Society of Psychiatry and Neurology.<br/>The poster is currently displayed at Miki Mental Clinic with the kind permission of the clinic director.</> },
 ];
 
 function Biography() {
