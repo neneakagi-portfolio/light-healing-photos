@@ -80,7 +80,7 @@ function About() {
 
         <div className="md:col-span-5 order-1 md:order-2">
           <div className="relative aspect-[4/5] bg-sumi">
-            <img src={hero} alt="Nene Akagi" loading="lazy" width={1280} height={1600} className="absolute inset-0 w-full h-full object-cover" />
+            <img src={hero} alt="写真家・研究者 朱樹音々（Nene Akagi）のポートレート / Portrait of photographer and researcher Nene Akagi" loading="lazy" width={1280} height={1600} className="absolute inset-0 w-full h-full object-cover" />
           </div>
           <p className="font-sans text-[10px] text-muted-foreground mt-3 text-right">PORTRAIT, 2024</p>
         </div>
