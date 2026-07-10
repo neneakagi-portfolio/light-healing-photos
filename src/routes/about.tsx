@@ -6,11 +6,26 @@ import hero from "@/assets/nene-about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — 朱樹音々 / NENE AKAGI" },
-      { name: "description", content: "写真家・研究家 朱樹音々のプロフィールと活動概要。" },
-      { property: "og:title", content: "About — NENE AKAGI" },
-      { property: "og:description", content: "A photographer and researcher working between art and psychology." },
+      { title: "About | Nene Akagi | 朱樹音々 プロフィール" },
+      { name: "description", content: "写真家・研究者 朱樹音々（Nene Akagi）のプロフィールと活動概要。Inner Vision Photography（心象写真）を軸に、展示・講演・研究を国内外で展開。" },
+      { property: "og:title", content: "About | Nene Akagi | 朱樹音々 プロフィール" },
+      { property: "og:description", content: "写真家・研究者 朱樹音々（Nene Akagi）のプロフィールと活動概要。" },
+      { property: "og:url", content: "https://neneakagi.lovable.app/about" },
+      { property: "og:image", content: `https://neneakagi.lovable.app${hero}` },
+      { name: "twitter:image", content: `https://neneakagi.lovable.app${hero}` },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/about" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "About", item: "https://neneakagi.lovable.app/about" },
+        ],
+      }),
+    }],
   }),
   component: () => <SiteLayout><About /></SiteLayout>,
 });
