@@ -7,12 +7,26 @@ import projectImg from "@/assets/nene-project.jpg";
 export const Route = createFileRoute("/project")({
   head: () => ({
     meta: [
-      { title: "Project — 心象写真 / NENE AKAGI" },
-      { name: "description", content: "心象写真とは何か。朱樹音々が提唱する、写真を通して内面を可視化する表現手法と、その実践プログラム。" },
-      { property: "og:title", content: "Project — Shinshō Shashin / NENE AKAGI" },
-      { property: "og:description", content: "Drawing the inner contour through photography." },
-      { property: "og:image", content: projectImg },
+      { title: "Project — 心象写真 Inner Vision Photography | Nene Akagi" },
+      { name: "description", content: "朱樹音々（Nene Akagi）が提唱する Inner Vision Photography（心象写真）。写真を通して内面を可視化する表現手法と実践プログラム。" },
+      { property: "og:title", content: "Project — 心象写真 Inner Vision Photography | Nene Akagi" },
+      { property: "og:description", content: "Drawing the inner contour through photography — the Inner Vision Photography practice by Nene Akagi." },
+      { property: "og:url", content: "https://neneakagi.lovable.app/project" },
+      { property: "og:image", content: `https://neneakagi.lovable.app${projectImg}` },
+      { name: "twitter:image", content: `https://neneakagi.lovable.app${projectImg}` },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/project" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Project", item: "https://neneakagi.lovable.app/project" },
+        ],
+      }),
+    }],
   }),
   component: () => <SiteLayout><Project /></SiteLayout>,
 });
