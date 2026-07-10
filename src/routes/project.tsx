@@ -57,7 +57,7 @@ function Project() {
     <>
       <section className="relative">
         <div className="relative h-[60vh] md:h-[70vh] bg-sumi">
-          <img src={projectImg} alt="Shinshō Shashin" loading="lazy" width={1600} height={1280} className="absolute inset-0 w-full h-full object-cover" />
+          <img src={projectImg} alt="Inner Vision Photography（心象写真）プロジェクトのビジュアル / Visual for the Inner Vision Photography project by Nene Akagi" loading="lazy" width={1600} height={1280} className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
         </div>
         <div className="max-w-[1100px] mx-auto px-6 -mt-20 relative">
