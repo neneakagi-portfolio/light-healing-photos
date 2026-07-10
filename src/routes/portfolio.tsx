@@ -11,12 +11,26 @@ import work3 from "@/assets/work3.jpg";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — 作品 / NENE AKAGI" },
-      { name: "description", content: "朱樹音々の代表作品集。心象写真シリーズ、肖像、風景、抽象。" },
-      { property: "og:title", content: "Portfolio — NENE AKAGI" },
-      { property: "og:description", content: "Selected works from the Shinshō Shashin practice." },
-      { property: "og:image", content: hero },
+      { title: "Portfolio | Nene Akagi | Contemporary Photography" },
+      { name: "description", content: "朱樹音々（Nene Akagi）の代表作品集。Inner Vision Photography（心象写真）シリーズ、肖像、風景、抽象。" },
+      { property: "og:title", content: "Portfolio | Nene Akagi | Contemporary Photography" },
+      { property: "og:description", content: "Selected works from the Inner Vision Photography practice by Nene Akagi." },
+      { property: "og:url", content: "https://neneakagi.lovable.app/portfolio" },
+      { property: "og:image", content: `https://neneakagi.lovable.app${hero}` },
+      { name: "twitter:image", content: `https://neneakagi.lovable.app${hero}` },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/portfolio" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://neneakagi.lovable.app/portfolio" },
+        ],
+      }),
+    }],
   }),
   component: () => <SiteLayout><Portfolio /></SiteLayout>,
 });
