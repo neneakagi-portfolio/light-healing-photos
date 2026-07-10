@@ -34,6 +34,8 @@ const timeline = [
   { y: "2026.1–2",ja: "Fine Art Photography Exhibition Vol.9 横浜赤レンガ倉庫 出展（日本文藝主催）", en: "Fine Art Photography Exhibition Vol.9, Yokohama Red Brick Warehouse (organized by Nihon Bungei)" },
   { y: "2026.6", ja: "第122回日本精神神経学会学術総会にて、精神科医・三木和平先生の教育講演に心象写真の作品が紹介される", en: "The 122nd Annual Meeting of the Japanese Society of Psychiatry and Neurology — photographic works introduced during an educational lecture by psychiatrist Dr. Kazuhei Miki" },
   { y: "2026.6", ja: "第3回日本外来精神医学会学術総会 ポスター発表に参加。心象写真を非言語的な自己理解・感情認知へのアプローチとして研究発表", en: "The 3rd Annual Meeting of the Japanese Society of Outpatient Psychiatry — participated in the poster session presenting research on Inner Vision Photography as a non-verbal approach to self-understanding and emotional awareness" },
+  { y: "2026", ja: "日本精神神経学会学術総会にて研究ポスター発表", en: "Presented a research poster at the Annual Meeting of the Japanese Society of Psychiatry and Neurology" },
+  { y: "2026", ja: "学会発表ポスターを三木メンタルクリニック院内に展示（院長のご厚意により）", en: "The research poster is currently displayed at Miki Mental Clinic (Japan) with permission from the clinic director" },
 ];
 
 function Biography() {

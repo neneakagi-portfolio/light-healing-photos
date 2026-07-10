@@ -22,6 +22,17 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.07.10",
+    title: {
+      ja: "日本精神神経学会ポスターを三木メンタルクリニック院内に展示",
+      en: "Research Poster Displayed at Miki Mental Clinic",
+    },
+    body: {
+      ja: "日本精神神経学会学術総会で発表した研究ポスターを、このたび三木メンタルクリニック院内に展示していただくこととなりました。\n\n心象写真（Inner Vision Photography）の研究活動をご理解いただき、このような機会をいただけたことを心より感謝申し上げます。\n\nこの展示を通して、心象写真による自己理解やセルフマネジメントについて、多くの方に知っていただくきっかけになれば幸いです。",
+      en: "I am pleased to announce that my research poster presented at the Annual Meeting of the Japanese Society of Psychiatry and Neurology is now displayed at Miki Mental Clinic in Japan.\n\nI sincerely appreciate Dr. Miki and everyone at the clinic for supporting the dissemination of Inner Vision Photography and my research activities.\n\nI hope this exhibition will encourage more discussions about self-understanding, self-management, and the future potential of Inner Vision Photography.",
+    },
+  },
+  {
     date: "2026.06.25",
     title: {
       ja: "精神医学会にて学術発表・作品紹介",
