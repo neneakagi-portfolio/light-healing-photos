@@ -6,11 +6,24 @@ import { news } from "@/data/news";
 export const Route = createFileRoute("/news")({
   head: () => ({
     meta: [
-      { title: "NEWS | Nene Akagi" },
-      { name: "description", content: "朱樹音々（Nene Akagi）からのお知らせ。展示、ワークショップ、個人セッション、執筆などの最新情報。" },
-      { property: "og:title", content: "NEWS | Nene Akagi" },
-      { property: "og:description", content: "展示、ワークショップ、個人セッションなどのお知らせ。" },
+      { title: "News | Nene Akagi | Inner Vision Photography" },
+      { name: "description", content: "朱樹音々（Nene Akagi）からのお知らせ。展示、ワークショップ、個人セッション、学会発表、執筆などの最新情報。" },
+      { property: "og:title", content: "News | Nene Akagi | Inner Vision Photography" },
+      { property: "og:description", content: "展示、ワークショップ、学会発表などのお知らせ。" },
+      { property: "og:url", content: "https://neneakagi.lovable.app/news" },
     ],
+    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/news" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "News", item: "https://neneakagi.lovable.app/news" },
+        ],
+      }),
+    }],
   }),
   component: () => <SiteLayout><NewsPage /></SiteLayout>,
 });
