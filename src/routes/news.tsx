@@ -10,17 +10,17 @@ export const Route = createFileRoute("/news")({
       { name: "description", content: "朱樹音々（Nene Akagi）からのお知らせ。展示、ワークショップ、個人セッション、学会発表、執筆などの最新情報。" },
       { property: "og:title", content: "News | Nene Akagi | Inner Vision Photography" },
       { property: "og:description", content: "展示、ワークショップ、学会発表などのお知らせ。" },
-      { property: "og:url", content: "https://neneakagi.lovable.app/news" },
+      { property: "og:url", content: "https://neneakagi.com/news" },
     ],
-    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/news" }],
+    links: [{ rel: "canonical", href: "https://neneakagi.com/news" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "News", item: "https://neneakagi.lovable.app/news" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.com/" },
+          { "@type": "ListItem", position: 2, name: "News", item: "https://neneakagi.com/news" },
         ],
       }),
     }],

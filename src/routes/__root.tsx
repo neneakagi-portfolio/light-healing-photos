@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Person",
           name: "Nene Akagi",
           alternateName: ["朱樹音々", "あかぎ ねね"],
-          url: "https://neneakagi.lovable.app",
+          url: "https://neneakagi.com",
           jobTitle: ["Photographer", "Researcher", "Founder of Inner Vision Photography"],
           nationality: "Japanese",
           sameAs: [
@@ -96,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "WebSite",
           name: "Nene Akagi | Inner Vision Photography",
           alternateName: "朱樹音々 公式サイト",
-          url: "https://neneakagi.lovable.app",
+          url: "https://neneakagi.com",
           inLanguage: ["ja-JP", "en"],
           author: { "@type": "Person", name: "Nene Akagi" },
         }),
