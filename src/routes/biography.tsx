@@ -9,17 +9,17 @@ export const Route = createFileRoute("/biography")({
       { name: "description", content: "写真家・研究者 朱樹音々（Nene Akagi）の経歴・受賞・展示・出版・学会発表など、Inner Vision Photographyに至るまでの歩み。" },
       { property: "og:title", content: "Biography | Nene Akagi | Photographer & Researcher" },
       { property: "og:description", content: "朱樹音々（Nene Akagi）の経歴・受賞・展示・学会発表。" },
-      { property: "og:url", content: "https://neneakagi.lovable.app/biography" },
+      { property: "og:url", content: "https://neneakagi.com/biography" },
     ],
-    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/biography" }],
+    links: [{ rel: "canonical", href: "https://neneakagi.com/biography" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Biography", item: "https://neneakagi.lovable.app/biography" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.com/" },
+          { "@type": "ListItem", position: 2, name: "Biography", item: "https://neneakagi.com/biography" },
         ],
       }),
     }],

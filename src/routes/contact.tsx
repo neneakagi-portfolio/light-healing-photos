@@ -17,17 +17,17 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "朱樹音々（Nene Akagi）への展示・ワークショップ・講演・取材・共同研究のご依頼、企業研修プログラムのご相談はこちらから。" },
       { property: "og:title", content: "Contact | Nene Akagi | お問い合わせ" },
       { property: "og:description", content: "For exhibitions, workshops, lectures and collaborative research with Nene Akagi." },
-      { property: "og:url", content: "https://neneakagi.lovable.app/contact" },
+      { property: "og:url", content: "https://neneakagi.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://neneakagi.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://neneakagi.com/contact" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Contact", item: "https://neneakagi.lovable.app/contact" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://neneakagi.com/" },
+          { "@type": "ListItem", position: 2, name: "Contact", item: "https://neneakagi.com/contact" },
         ],
       }),
     }],
