@@ -47,8 +47,7 @@ function Home() {
                 }
                 en={
                   <>
-                    <span className="block">Nene Akagi — photographer and researcher.</span>
-                    <span className="block mt-4">For 26 years she has continued her practice in photography, proposing her own approach: <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span>.</span>
+                    <span className="block">Since 2000, Nene Akagi has continued her photographic practice while developing her original approach, <span className="text-foreground">Inner Vision Photography (Shinshō Shashin)</span>.</span>
                     <span className="block mt-4">Emotions, memories and sensations that precede language — the "landscapes that do not yet have an outline" — are made visible through the act of photography.</span>
                     <span className="block mt-4">From the intersection of art, psychology and non-verbal communication, she explores new ways of self-understanding.</span>
                   </>
