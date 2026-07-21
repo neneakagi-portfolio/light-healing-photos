@@ -40,7 +40,7 @@ function Home() {
                 ja={
                   <>
                     <span className="block">写真家・研究者　朱樹音々（Nene Akagi）</span>
-                    <span className="block mt-4">26年にわたり写真表現を続けながら、<span className="text-foreground">「心象写真（Inner Vision Photography）」</span>という独自のアプローチを提唱。</span>
+                    <span className="block mt-4">2000年から現在まで写真活動を続けながら、<span className="text-foreground">「心象写真（Inner Vision Photography）」</span>という独自のアプローチを提唱。</span>
                     <span className="block mt-4">言葉になる前の感情、記憶、感覚。人の内側に存在する“まだ輪郭を持たない景色”を、写真という行為を通して可視化しています。</span>
                     <span className="block mt-4">アート、心理、非言語コミュニケーションの交差点から、新しい自己理解のあり方を探求しています。</span>
                   </>
