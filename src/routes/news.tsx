@@ -28,6 +28,25 @@ export const Route = createFileRoute("/news")({
   component: () => <SiteLayout><NewsPage /></SiteLayout>,
 });
 
+// 見出しフォント（欧文セリフ）では数字のベースラインが日本語文字とずれるため、
+// 日本語タイトル内の数字だけを日本語フォントで描画して揃える。
+function JpTitleText({ text }: { text: string }) {
+  const parts = text.split(/(\d+)/);
+  return (
+    <>
+      {parts.map((part, i) =>
+        /^\d+$/.test(part) ? (
+          <span key={i} className="font-jp">
+            {part}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )}
+    </>
+  );
+}
+
 function NewsPage() {
   return (
     <section className="max-w-3xl mx-auto px-6 lg:px-12 py-24 md:py-32">
@@ -54,7 +73,7 @@ function NewsPage() {
               </div>
               <div className="md:col-span-9">
                 <h2 className="font-display text-xl md:text-2xl leading-snug">
-                  <T ja={n.title.ja} en={n.title.en} />
+                  <T ja={<JpTitleText text={n.title.ja} />} en={n.title.en} />
                 </h2>
                 <div className="font-jp text-[14px] leading-loose text-foreground/75 mt-5 whitespace-pre-line">
                   <T ja={n.body.ja} en={n.body.en} />
