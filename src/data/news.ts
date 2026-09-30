@@ -22,6 +22,22 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "2026.9.26",
+    title: {
+      ja: "第57回日本芸術療法学会学術大会にて口頭発表",
+      en: "Oral Presentation at the 57th Annual Conference of the Japanese Society of Art Therapy",
+    },
+    body: {
+      ja: "2026年9月26日、第57回日本芸術療法学会学術大会にて、Inner Vision Photography（心象写真）に関する口頭発表を行いました。\n\n発表タイトルは、\n\n「心象写真による自己理解とセルフコントロールを促す実践研究―スマートフォンを用いたセルフケアの可能性―」\n\nです。\n\n長年続けてきた心象写真の実践をもとに、写真表現を通した自己対話と自己理解、そして「自分で選ぶ」ことへつながるプロセスについて発表しました。",
+      en: "On September 26, 2026, Nene Akagi gave an oral presentation on Inner Vision Photography (Shinshō Shashin) at the 57th Annual Conference of the Japanese Society of Art Therapy.\n\nThe presentation was titled “A Practice Study Promoting Self-Understanding and Self-Control through Shinshō Shashin (Inner Vision Photography) — The Potential of Smartphone-Based Self-Care.”\n\nBased on her long-standing practice of Inner Vision Photography, she presented a process in which photographic expression leads to self-dialogue, self-understanding, and the act of making one's own choices.",
+    },
+    link: "https://sjpe-at.org/taikai2026news001/",
+    linkLabel: {
+      ja: "第57回日本芸術療法学会学術大会 公式情報",
+      en: "Official information on the 57th Annual Conference of the Japanese Society of Art Therapy",
+    },
+  },
+  {
     date: "2026.07.10",
     title: {
       ja: "日本精神神経学会ポスターを三木メンタルクリニック院内に展示",

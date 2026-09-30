@@ -48,6 +48,7 @@ const timeline = [
   { y: "2026.6", ja: "第122回日本精神神経学会学術総会にて、精神科医・三木和平先生の教育講演に心象写真の作品が紹介される", en: "The 122nd Annual Meeting of the Japanese Society of Psychiatry and Neurology — photographic works introduced during an educational lecture by psychiatrist Dr. Kazuhei Miki" },
   { y: "2026.6", ja: "第3回日本外来精神医学会学術総会 ポスター発表に参加。心象写真を非言語的な自己理解・感情認知へのアプローチとして研究発表", en: "The 3rd Annual Meeting of the Japanese Society of Outpatient Psychiatry — participated in the poster session presenting research on Inner Vision Photography as a non-verbal approach to self-understanding and emotional awareness" },
   { y: "2026.6", ja: <>日本精神神経学会学術総会にて研究ポスター発表。<br/>発表ポスターは現在、三木メンタルクリニック院内に展示されています（院長のご厚意による）</>, en: <>Presented a research poster at the Annual Meeting of the Japanese Society of Psychiatry and Neurology.<br/>The poster is currently displayed at Miki Mental Clinic with the kind permission of the clinic director.</> },
+  { y: "2026.9", ja: "第57回日本芸術療法学会学術大会 口頭発表「心象写真による自己理解とセルフコントロールを促す実践研究―スマートフォンを用いたセルフケアの可能性―」 Inner Vision Photography（心象写真）について、自身の長年の実践をもとに、写真表現を通した自己対話・自己理解・セルフコントロールへの可能性を発表", en: "The 57th Annual Conference of the Japanese Society of Art Therapy — oral presentation “A Practice Study Promoting Self-Understanding and Self-Control through Shinshō Shashin (Inner Vision Photography) — The Potential of Smartphone-Based Self-Care”. Drawing on her long-standing practice of Inner Vision Photography, she presented its possibilities for self-dialogue, self-understanding, and self-control through photographic expression" },
 ];
 
 function Biography() {
