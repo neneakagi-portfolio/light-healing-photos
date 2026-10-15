@@ -96,7 +96,21 @@ function Contact() {
       </div>
 
       <form
-        onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+        onSubmit={async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const response = await fetch("https://formspree.io/f/maeqllba", {
+    method: "POST",
+    body: new FormData(form),
+    headers: { Accept: "application/json" },
+  });
+  if (response.ok) {
+    setSent(true);
+    form.reset();
+  } else {
+    alert("送信できませんでした。もう一度お試しください。");
+  }
+}}
         className="md:col-span-7"
       >
         {sent ? (
@@ -110,22 +124,22 @@ function Contact() {
           <div className="space-y-8">
             <div className="grid sm:grid-cols-2 gap-8">
               <Field jaLabel="お名前" enLabel="Name" tag="NAME">
-                <input required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
+                <<input name="name" required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
               <Field jaLabel="所属（任意）" enLabel="Company (optional)" tag="COMPANY">
-                <input className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
+                <<input name="company" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
             </div>
             <Field jaLabel="メールアドレス" enLabel="Email" tag="EMAIL">
-              <input required type="email" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
+              <<input name="email" required type="email" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
             </Field>
             <Field jaLabel="ご用件" enLabel="Subject" tag="SUBJECT">
-              <select required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors">
+              <select name="subject" required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors">
                 {subjects.map(s => <option key={s}>{s}</option>)}
               </select>
             </Field>
             <Field jaLabel="メッセージ" enLabel="Message" tag="MESSAGE">
-              <textarea required rows={6} className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors resize-none" />
+              <textarea name="message" required rows={6} className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors resize-none" />
             </Field>
             <button
               type="submit"
