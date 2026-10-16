@@ -131,7 +131,7 @@ className="md:col-span-7"
               </Field>
             </div>
             <Field jaLabel="メールアドレス" enLabel="Email" tag="EMAIL">
-              <<input name="email" required type="email" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
+              <input name="email" required type="email" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
             </Field>
             <Field jaLabel="ご用件" enLabel="Subject" tag="SUBJECT">
               <select name="subject" required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors">
