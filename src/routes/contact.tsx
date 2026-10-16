@@ -110,7 +110,7 @@ function Contact() {
   } else {
     alert("送信できませんでした。もう一度お試しください。");
   }
-}}}
+}}
 className="md:col-span-7"
 >
         {sent ? (
