@@ -124,7 +124,7 @@ function Contact() {
           <div className="space-y-8">
             <div className="grid sm:grid-cols-2 gap-8">
               <Field jaLabel="お名前" enLabel="Name" tag="NAME">
-                <<input name="name" required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
+                <input name="name" required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
               <Field jaLabel="所属（任意）" enLabel="Company (optional)" tag="COMPANY">
                 <<input name="company" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
