@@ -111,8 +111,8 @@ function Contact() {
     alert("送信できませんでした。もう一度お試しください。");
   }
 }}}
-        className="md:col-span-7"
-      >
+className="md:col-span-7"
+>
         {sent ? (
           <div className="border border-border bg-secondary/40 p-12 text-center">
             <p className="font-display italic text-3xl">Thank you.</p>
