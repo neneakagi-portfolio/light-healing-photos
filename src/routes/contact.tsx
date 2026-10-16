@@ -127,7 +127,7 @@ function Contact() {
                 <input name="name" required className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
               <Field jaLabel="所属（任意）" enLabel="Company (optional)" tag="COMPANY">
-                <<input name="company" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
+                <input name="company" className="w-full bg-transparent border-b border-foreground/40 py-3 focus:outline-none focus:border-ember transition-colors" />
               </Field>
             </div>
             <Field jaLabel="メールアドレス" enLabel="Email" tag="EMAIL">
